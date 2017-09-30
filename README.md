@@ -3,24 +3,28 @@ This is the official website of Programming club, UIET, Panjab University
 
 ## Quickstart ##
 
-First, clone the repository:
+1. Clone the repository:
 
     git clone https://github.com/pclubuiet/website.git
 
-cd to the repository
+2. cd to the repository
 
     cd website
 
-Install the dependences
+3. Create a virtualenv and install the dependences using the Makefile.
 
-    pip install -r requirements.txt
+    make dev
 
-Run the migrations and collect the static files
+4. Activate the virtualenv created in step 3
+
+    source ./venv/bin/activate
+
+5. Run the migrations and collect the static files
 
     python manage.py collectstatic
     python manage.py migrate
 
-Once everything it's setup you can run the development server: [http://localhost:8000/](http://localhost:8000/)
+6. Once everything it's setup you can run the development server: [http://localhost:8000/](http://localhost:8000/)
 
     python manage.py runserver
 
