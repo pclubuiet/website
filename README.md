@@ -5,7 +5,7 @@ This is the official website of Programming club, UIET, Panjab University
 
 First, clone the repository:
 
-    git clone https://github.com/pclubuiet/website.git
+    git clone https://github.com/pclubuiet.git
 
 cd to the repository
 
