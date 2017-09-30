@@ -9,7 +9,7 @@ First, clone the repository:
 
 cd to the repository
 
-    cd pclubuiet
+    cd website
 
 Install the dependences
 
