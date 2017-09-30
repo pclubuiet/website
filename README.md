@@ -3,24 +3,31 @@ This is the official website of Programming club, UIET, Panjab University
 
 ## Quickstart ##
 
-First, clone the repository:
+1. Fork the repository (button found in top right corner of this repository):
 
-    git clone https://github.com/pclubuiet/website.git
+    This will create an exact copy of this repository and will add it to your account.
 
-cd to the repository
 
-    cd pclubuiet
+2. Clone the forked repository:
 
-Install the dependences
+    `git clone https://github.com/your-username/website.git`
 
-    pip install -r requirements.txt
 
-Run the migrations and collect the static files
+3. Open the cloned folder on your local machine (cd into the cloned directory):
 
-    python manage.py collectstatic
-    python manage.py migrate
+    `cd website`
 
-Once everything it's setup you can run the development server: [http://localhost:8000/](http://localhost:8000/)
+4. Install the dependences:
 
-    python manage.py runserver
+    `pip install -r requirements.txt`
+
+5. Run the migrations and collect the static files:
+
+    `python manage.py collectstatic`
+
+    `python manage.py migrate`
+
+6. Once setup is completed (above steps) you can run the development server: [http://localhost:8000/](http://localhost:8000/)
+
+    `python manage.py runserver`
 
