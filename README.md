@@ -7,6 +7,14 @@ First, clone the repository:
 
     git clone https://github.com/pclubuiet/website.git
 
+Create a [virtual environment](https://pypi.python.org/pypi/virtualenv)
+    
+    virtualenv venv
+
+Activate the virtual environment to isolate the working environment
+
+    source venv/bin/activate
+
 cd to the repository
 
     cd website
