@@ -9,7 +9,9 @@ First, fork the repository:
 
 clone the repository:
 
-    git clone https://github.com/username/website.git
+    git clone https://github.com/<username>/website.git
+    
+    where <username>  is your github username.
 
 cd to the repository
 
