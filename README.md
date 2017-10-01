@@ -50,7 +50,7 @@ This is the official website of Programming club, UIET, Panjab University
    
    Once the issue is assigned to you, you can start working on it. Step 10 and beyond will guide you through this part of contribution.
    
-   **Only PR from the assignee would be considered. This is to save yours and ours time and energy.**
+   **Only Pull Request from the assignee would be considered. This is to save yours and ours time and energy.**
    **No two contributors shall be working on the same issue.**
    
 10. Create a new branch and switch to it. (make sure you are on master before doing this).
@@ -76,9 +76,9 @@ This is the official website of Programming club, UIET, Panjab University
     The **-u** option is required only the first time you push the branch.
 	In case you have made multiple commits, you need to squash them into a single commit before pushing.
 
-13. Then create a PR from that branch using GitHub.
+13. Then create a Pull Request from that branch using GitHub.
 
-**What after you have submitted a PR?**
+**What after you have submitted a Pull Request?**
 
 Well, you could wait for it to be reviewed by someone or you could attempt to fix another issue. 
 
@@ -87,13 +87,13 @@ Well, you could wait for it to be reviewed by someone or you could attempt to fi
 You could help us in an even better way! 
 
 
-### Help us by reviewing others' PRs! ###
-If you have the time and the knowledge then you must review others' PRs. This would stop PRs from stacking up and will definitely mean your PR would be reviewed faster.
+### Help us by reviewing others' Pull Requests! ###
+If you have the time and the knowledge then you must review others' Pull Requests. This would stop Pull Requests from stacking up and will definitely mean your Pull Request would be reviewed faster.
 
-**Things to keep in mind while reviewing a PR**
+**Things to keep in mind while reviewing a Pull Request**
 
 If any of the following questions has a **yes** for an answer then the request shall **not** be approved.
-* Will the referenced issue **not** be fixed with the PR?
+* Will the referenced issue **not** be fixed with the Pull Request?
 * Are there unnecessary changes?
 * Is the commit message **not** good?
 * Is a rebase required?
