@@ -3,13 +3,9 @@ This is the official website of Programming club, UIET, Panjab University
 
 ## Quickstart ##
 
-First, fork the repository:
+First, clone the repository:
 
-    Go to the top right corner and click fork
-
-clone the repository:
-
-    git clone https://github.com/username/website.git
+    git clone https://github.com/pclubuiet/website.git
 
 cd to the repository
 
