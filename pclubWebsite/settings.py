@@ -59,7 +59,7 @@ ROOT_URLCONF = 'pclubWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,8 +122,8 @@ DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'home','static')
-STATICFILES_DIRS = [ os.path.join(BASE_DIR,'home','staticFiles') ]
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [ os.path.join(BASE_DIR,'staticFiles') ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
