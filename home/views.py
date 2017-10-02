@@ -5,4 +5,4 @@ class Home(TemplateView):
     template_name = 'home/home.html'
 
 class Resources(TemplateView):
-    template_name = 'resources/resources.html'
+    template_name = 'home/resources/resources.html'
