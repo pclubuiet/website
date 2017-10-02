@@ -10,7 +10,7 @@ This is the official website of Programming club, UIET, Panjab University
     ```
     We recommend using python-virtualenv. Any other packages would do fine though.
 
-3. Activate the newly created virtual env:
+3. Activate the newly created virtual environment:
     ```
     cd env
     source bin/activate
