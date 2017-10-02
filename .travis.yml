@@ -9,5 +9,5 @@ install:
 # command to run tests
 script: 
   - python manage.py migrate
-  - python manage.py collecstatic
+  - python manage.py collectstatic
   - python manage.py test
