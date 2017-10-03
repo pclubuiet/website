@@ -1,14 +1,13 @@
 # Programming club UIET #
-This is the official website of Programming club, UIET, Panjab University
-
+This is the official website of Programming club, UIET, Panjab University ![Loading Badge Failed](https://travis-ci.org/pclubuiet/website.svg?branch=master)
 ## Setting up your Development Environment ##
 1. First, fork this repository to your account.
 
 2. Create a virtual environment on your machine. 
     ```
-    virtualenv env
+    virtualenv -p python3 env
     ```
-    We recommend using python-virtualenv. Any other packages would do fine though.
+    We recommend using python3-virtualenv. Any other packages would do fine though.
 
 3. Activate the newly created virtual environment:
     ```
@@ -29,13 +28,13 @@ This is the official website of Programming club, UIET, Panjab University
     
 6. Run the migrations and collect staticfiles
     ```
-    python manage.py migrate
-    python manage.py collectstatic
+    python3 manage.py migrate
+    python3 manage.py collectstatic
     ```
     
 7. Run the live development server on your machine and test it.
     ```
-    python manage.py runserver
+    python3 manage.py runserver
     ```
     Once the server is started, open http://127.0.0.1:8000/home in a web browser.
     Everything went well if the webpage loads correctly and you don't see any errors.
@@ -62,9 +61,12 @@ This is the official website of Programming club, UIET, Panjab University
     git checkout -b mybranch
     ```
 
-11. Make your changes.
-	
-	Ensure that you follow [PEP8](https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles) style guide for python code while naming functions or classes.
+11. Make your changes and then execute the tests to make sure you didn't break anything.
+
+    ```
+    python3 manage.py test
+    ```
+    Ensure that you follow [PEP8](https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles) style guide for python code while naming functions or classes.
 
     Then stage them and commit them.
     Check out Chris Beams's guide to writing good commit messages [here](https://chris.beams.io/posts/git-commit/).
