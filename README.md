@@ -46,12 +46,10 @@ This is the official website of Programming club, UIET, Panjab University
     ```
     
 9. Find an issue in this repository that you would like to and can fix.
-   After you have found an issue, ping a maintainer on that issue to assigned it to you.
-   
-   Once the issue is assigned to you, you can start working on it. Step 10 and beyond will guide you through this part of contribution.
-   
-   **Only Pull Request from the assignee would be considered. This is to save yours and ours time and energy.**
-   **No two contributors shall be working on the same issue.**
+   Start working on an issue. Steps 10 and beyond will guide you in doing this.
+
+   **In case multiple people are working on the same issue, the Pull Request that is completed first shall be given**
+   **the highest preference. The reviews will be on a first come first service basis.**   
    
 10. Create a new branch and switch to it. (make sure you are on master before doing this).
     ```
@@ -64,7 +62,11 @@ This is the official website of Programming club, UIET, Panjab University
     git checkout -b mybranch
     ```
 
-11. Make your changes. Then stage them and commit them.
+11. Make your changes.
+	
+	Ensure that you follow [PEP8](https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles) style guide for python code while naming functions or classes.
+
+    Then stage them and commit them.
     Check out Chris Beams's guide to writing good commit messages [here](https://chris.beams.io/posts/git-commit/).
 
     *A small description of your changes is must in the commit messages.* 
@@ -98,3 +100,5 @@ If any of the following questions has a **yes** for an answer then the request s
 * Is the commit message **not** good?
 * Is a rebase required?
 * Is the fix dirty (hacky)?
+
+*Reviewers shall make sure that the reviews are done on a first come first service basis.*
