@@ -17,22 +17,22 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    
   </head>
   <body  {% block body_style %} {% endblock %}>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'home:home' %}">Programming club</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'home:home' %}">Programming club</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li {% block nav_home %}class="active"{% endblock %}><a href="{% url 'home:home' %}">Home</a></li>
+        <li {% block nav_resources %}{% endblock %}><a href="{% url 'home:resources' %}">Resources</a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li {% block nav_home %}class="active"{% endblock %}><a href="{% url 'home:home' %}">Home</a></li>
-      <li {% block nav_resources %}{% endblock %}><a href="{% url 'home:resources' %}">Resources</a></li>
-    </ul>
-  </div>
-</nav>
-<div id = "content">
+  </nav>
+  <div id="content">
 {% block content %}{% endblock %}
+  </div>
   </body>
-
 </html>
