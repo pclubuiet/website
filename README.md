@@ -1,5 +1,5 @@
 # Programming club UIET #
-This is the official website of Programming club, UIET, Panjab University
+This is the official website of the Programming club at UIET, Panjab University.
 
 ## Setting up your Development Environment ##
 1. First, fork this repository to your account.
@@ -27,7 +27,7 @@ This is the official website of Programming club, UIET, Panjab University
     pip3 install -r requirements.txt
     ```
     
-6. Run the migrations and collect staticfiles
+6. Run the migrations and collect staticfiles.
     ```
     python manage.py migrate
     python manage.py collectstatic
@@ -51,13 +51,13 @@ This is the official website of Programming club, UIET, Panjab University
    **In case multiple people are working on the same issue, the Pull Request that is completed first shall be given**
    **the highest preference. The reviews will be on a first come first service basis.**   
    
-10. Create a new branch and switch to it. (make sure you are on master before doing this).
+10. Create a new branch and switch to it (make sure you are on master before doing this).
     ```
     git branch mybranch
     git checkout mybranch
     ```
     'mybranch' can be replaced by your preferred name for the branch.
-    The above to commands are equivalent to the following
+    The above two commands are equivalent to the following:
     ```
     git checkout -b mybranch
     ```
@@ -66,10 +66,10 @@ This is the official website of Programming club, UIET, Panjab University
 	
 	Ensure that you follow [PEP8](https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles) style guide for python code while naming functions or classes.
 
-    Then stage them and commit them.
+    Then, stage them and commit them.
     Check out Chris Beams's guide to writing good commit messages [here](https://chris.beams.io/posts/git-commit/).
 
-    *A small description of your changes is must in the commit messages.* 
+    *A small description of your changes is a must in the commit messages.* 
 
 12. After you are done making changes, push the branch to your fork.
     ```
@@ -80,7 +80,7 @@ This is the official website of Programming club, UIET, Panjab University
 
 13. Then create a Pull Request from that branch using GitHub.
 
-**What after you have submitted a Pull Request?**
+**What is after you have submitted a Pull Request?**
 
 Well, you could wait for it to be reviewed by someone or you could attempt to fix another issue. 
 
@@ -89,10 +89,10 @@ Well, you could wait for it to be reviewed by someone or you could attempt to fi
 You could help us in an even better way! 
 
 
-### Help us by reviewing others' Pull Requests! ###
-If you have the time and the knowledge then you must review others' Pull Requests. This would stop Pull Requests from stacking up and will definitely mean your Pull Request would be reviewed faster.
+### Help us by reviewing other Pull Requests! ###
+If you have the time and the knowledge then you can review other Pull Requests. This would stop Pull Requests from stacking up and will definitely mean your Pull Request would be reviewed faster.
 
-**Things to keep in mind while reviewing a Pull Request**
+**Things to keep in mind while reviewing a Pull Request.**
 
 If any of the following questions has a **yes** for an answer then the request shall **not** be approved.
 * Will the referenced issue **not** be fixed with the Pull Request?
