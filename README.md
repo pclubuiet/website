@@ -57,7 +57,7 @@ This is the official website of the Programming club at UIET, Panjab University.
     git checkout mybranch
     ```
     'mybranch' can be replaced by your preferred name for the branch.
-    The above to commands are equivalent to the following:
+    The above two commands are equivalent to the following:
     ```
     git checkout -b mybranch
     ```
