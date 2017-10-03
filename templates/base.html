@@ -17,12 +17,34 @@
     <link rel = 'stylesheet' href="{% static 'home/base.css' %}">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        jQuery(window).load(function(){
+            jQuery(".spinner-wrapper").fadeOut(500);
+        });
+    </script>
+    <noscript>
+    <style>.spinner-wrapper { display: none; } </style>
+</noscript>
+
 </head>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   </head>
   <body  {% block body_style %} {% endblock %}>
+<!--CSS Spinner-->
+  <div class="spinner-wrapper">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -46,7 +68,6 @@
   </div>
 
   <p align="justify"><font size="2px" color="grey"><center>Copyright 2017 &copy; Programming Club,UIET. All Rights Reserved. <br></center></font></p>    
-</footer>
+</footer> 
   </body>
-
 </html>
