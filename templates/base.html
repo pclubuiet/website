@@ -20,9 +20,26 @@
 </head>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    jQuery(window).load(function(){
+        jQuery(".loader-wrapper").fadeOut(2500);
+    });
+	</script>
 
   </head>
   <body  {% block body_style %} {% endblock %}>
+<!--CSS Loader -->
+<div class="loader-wrapper">
+  <div class="loader">
+  	<div class="loader-rect1"></div>
+  	<div class="loader-rect2"></div>
+  	<div class="loader-rect3"></div>
+  	<div class="loader-rect4"></div>
+  	<div class="loader-rect5"></div>
+  </div>
+</div>
 <nav class="navbar navbar-inverse" style="margin-bottom:0;">
   <div class="container-fluid">
     <div class="navbar-header">
