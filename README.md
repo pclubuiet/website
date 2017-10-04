@@ -1,7 +1,7 @@
 # Programming club UIET #
 This is the official website of Programming club, UIET, Panjab University ![Loading Badge Failed](https://travis-ci.org/pclubuiet/website.svg?branch=master)
 ## Setting up your Development Environment ##
-1. First, fork this repository to your account.
+1. Fork this repository to your account.
 
 2. Create a virtual environment on your machine. 
     ```
