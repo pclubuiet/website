@@ -1,7 +1,7 @@
 # Programming club UIET #
 This is the official website of Programming club, UIET, Panjab University ![Loading Badge Failed](https://travis-ci.org/pclubuiet/website.svg?branch=master)
 ## Setting up your Development Environment ##
-1. First, fork this repository to your account.
+1. Fork this repository to your account.
 
 2. Create a virtual environment on your machine. 
     ```
@@ -26,7 +26,7 @@ This is the official website of Programming club, UIET, Panjab University ![Load
     pip3 install -r requirements.txt
     ```
     
-6. Run the migrations and collect staticfiles
+6. Run the migrations and collect static files.
     ```
     python3 manage.py migrate
     python3 manage.py collectstatic
@@ -68,19 +68,26 @@ This is the official website of Programming club, UIET, Panjab University ![Load
     ```
     Ensure that you follow [PEP8](https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles) style guide for python code while naming functions or classes.
 
-    Then stage them and commit them.
+    
+12. Then stage them and commit them.
+     
+    ```
+    git add --all && git commit -m "insert_comment_here"
+    ```
+ 
     Check out Chris Beams's guide to writing good commit messages [here](https://chris.beams.io/posts/git-commit/).
 
-    *A small description of your changes is must in the commit messages.* 
+    *A small description of your changes is must in the commit messages.*     
 
-12. After you are done making changes, push the branch to your fork.
+
+13. After you are done making changes, push the branch to your fork.
     ```
     git push -u myfork mybranch
     ```
     The **-u** option is required only the first time you push the branch.
 	In case you have made multiple commits, you need to squash them into a single commit before pushing.
 
-13. Then create a Pull Request from that branch using GitHub.
+14. Then create a Pull Request from that branch using GitHub.
 
 **What after you have submitted a Pull Request?**
 
