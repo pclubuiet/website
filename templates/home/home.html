@@ -2,15 +2,15 @@
 {% load staticfiles %}
 {% block title %}Programming Club {% endblock %}
 {% block content %}
-<div class="jumbotron" style="background-image: url(/static/home/images/image_for_back.jpg); background-size: 100% 100%;" >
-  <div class="container">
+<div class="jumbotron" style="background-image: url({% static 'home/images/image_for_back.jpg' %}); background-size: 100% 100%; height:330px;">
+  <div class="container margin">
     <h1><center><font color="#00a652">Programming Club</font></center></h1>
     <h3><center><font color="#00a652">UIET, Panjab University</font></center></h3>
     
   </div>
 </div>
 <div class="container text-center">
-  <h1>About us</h1>
+  <h1 class="margin1">About us</h1>
   <p>Programming club is one of the biggest clubs of Panjab University. We aim and create a platform which allows students to gain assistance and mentorship to enhance their ability. Our aim is to propagate the enthusiasm for programming in the institute. We believe that every student should have an opportunity to learn how to code and we help them develop that passion for it.</p>
 </div>
 {% endblock %}
