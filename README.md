@@ -1,7 +1,7 @@
-# Programming club UIET #
-This is the official website of Programming club, UIET, Panjab University ![Loading Badge Failed](https://travis-ci.org/pclubuiet/website.svg?branch=master)
+# Programming Club UIET #
+This is the official website of the Programming Club at UIET, Panjab University. ![Loading Badge Failed](https://travis-ci.org/pclubuiet/website.svg?branch=master)
 ## Setting up your Development Environment ##
-1. First, fork this repository to your account.
+1. Fork this repository to your account.
 
 2. Create a virtual environment on your machine. 
     ```
@@ -9,7 +9,7 @@ This is the official website of Programming club, UIET, Panjab University ![Load
     ```
     We recommend using python3-virtualenv. Any other packages would do fine though.
 
-3. Activate the newly created virtual environment:
+3. Activate the newly created virtual environment.
     ```
     cd env
     source bin/activate
@@ -26,7 +26,7 @@ This is the official website of Programming club, UIET, Panjab University ![Load
     pip3 install -r requirements.txt
     ```
     
-6. Run the migrations and collect staticfiles
+6. Run the migrations and collect static files.
     ```
     python3 manage.py migrate
     python3 manage.py collectstatic
@@ -50,13 +50,13 @@ This is the official website of Programming club, UIET, Panjab University ![Load
    **In case multiple people are working on the same issue, the Pull Request that is completed first shall be given**
    **the highest preference. The reviews will be on a first come first service basis.**   
    
-10. Create a new branch and switch to it. (make sure you are on master before doing this).
+10. Create a new branch and switch to it (make sure you are on master before doing this).
     ```
     git branch mybranch
     git checkout mybranch
     ```
     'mybranch' can be replaced by your preferred name for the branch.
-    The above to commands are equivalent to the following
+    The above two commands are equivalent to the following
     ```
     git checkout -b mybranch
     ```
@@ -82,7 +82,7 @@ This is the official website of Programming club, UIET, Panjab University ![Load
 
 13. Then create a Pull Request from that branch using GitHub.
 
-**What after you have submitted a Pull Request?**
+**What is after you have submitted a Pull Request?**
 
 Well, you could wait for it to be reviewed by someone or you could attempt to fix another issue. 
 
@@ -91,16 +91,16 @@ Well, you could wait for it to be reviewed by someone or you could attempt to fi
 You could help us in an even better way! 
 
 
-### Help us by reviewing others' Pull Requests! ###
-If you have the time and the knowledge then you must review others' Pull Requests. This would stop Pull Requests from stacking up and will definitely mean your Pull Request would be reviewed faster.
+### Help us by reviewing other Pull Requests! ###
+If you have the time and the knowledge then you must review other Pull Requests. This would stop Pull Requests from stacking up and will definitely mean your Pull Request would be reviewed faster.
 
-**Things to keep in mind while reviewing a Pull Request**
+**Things to keep in mind while reviewing a Pull Request:**
 
-If any of the following questions has a **yes** for an answer then the request shall **not** be approved.
-* Will the referenced issue **not** be fixed with the Pull Request?
+If any of the following questions has a **YES** for an answer then the request shall **NOT** be approved.
+* Will the referenced issue **NOT** be fixed with the Pull Request?
+* Is the commit message **NOT** good?
 * Are there unnecessary changes?
-* Is the commit message **not** good?
 * Is a rebase required?
-* Is the fix dirty (hacky)?
+* Is the fix dirty / hacky?
 
-*Reviewers shall make sure that the reviews are done on a first come first service basis.*
+*Note: Reviewers shall make sure that the reviews are done on a first come, first served basis.*
