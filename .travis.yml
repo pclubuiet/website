@@ -1,13 +1,19 @@
-language: python
-python:
-  - "3.4"
-  - "3.5"
-  - "3.6"
-# command to install dependencies
-install:
-  - pip install -r requirements.txt
-# command to run tests
-script: 
-  - python manage.py migrate
-  - python manage.py collectstatic
-  - python manage.py test
+language: generic
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.16.1
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - docker-compose up -d db
+  - docker-compose build
+
+before_script:
+  - echo "Waiting for postgres.."; sleep 2;
+  - docker-compose ps
+
+script:
+  - docker-compose run website ./manage.py test
