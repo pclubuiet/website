@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>{% block title %}Programming club{% endblock %}</title>
+    <title>{% block title %}Programming Club{% endblock %}</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{% static 'home/base.css' %}"/>
     <!-- Latest compiled and minified CSS -->
@@ -20,13 +20,30 @@
 </head>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    jQuery(window).load(function(){
+        jQuery(".loader-wrapper").fadeOut(2500);
+    });
+	</script>
 
   </head>
   <body  {% block body_style %} {% endblock %}>
+<!--CSS Loader -->
+<div class="loader-wrapper">
+  <div class="loader">
+  	<div class="loader-rect1"></div>
+  	<div class="loader-rect2"></div>
+  	<div class="loader-rect3"></div>
+  	<div class="loader-rect4"></div>
+  	<div class="loader-rect5"></div>
+  </div>
+</div>
 <nav class="navbar navbar-inverse" style="margin-bottom:0;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'home:home' %}">Programming club</a>
+      <a class="navbar-brand" href="{% url 'home:home' %}">Programming Club</a>
     </div>
     <ul class="nav navbar-nav">
       <li {% block nav_home %}class="active"{% endblock %}><a href="{% url 'home:home' %}">Home</a></li>
