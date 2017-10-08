@@ -4,3 +4,105 @@
 {% block nav_resources %}
     class="active"
 {% endblock %}
+{% block css_include %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/resources.css' %}"/>
+{% endblock %}
+{% block content %}
+<div class="row">
+<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="card" data-toggle="modal" data-target="#myModalCpp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Square_200x200.svg/200px-Square_200x200.svg.png" alt="Avatar" style="max-width:100%">
+  <div class="container">
+    <h4><b>C++</b></h4> 
+     
+  </div>
+</div>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="card" data-toggle="modal" data-target="#myModalPython">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Square_200x200.svg/200px-Square_200x200.svg.png" alt="Avatar" style="max-width:100%">
+  <div class="container">
+    <h4><b>Python</b></h4> 
+     
+  </div>
+</div>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="card" data-toggle="modal" data-target="#myModalWeb">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Square_200x200.svg/200px-Square_200x200.svg.png" alt="Avatar" style="max-width:100%">
+  <div class="container">
+    <h4><b>Web Development</b></h4> 
+     
+  </div>
+</div>
+</div>
+</div>
+<div class="container">
+<!-- Modal -->
+<div id="myModalPython" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Python</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="container">
+<!-- Modal -->
+<div id="myModalCpp" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">C++</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="container">
+<!-- Modal -->
+<div id="myModalWeb" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Web Development</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}
