@@ -82,7 +82,7 @@ This is the official website of the Programming Club at UIET, Panjab University.
 
 13. Then create a Pull Request from that branch using GitHub.
 
-**What is after you have submitted a Pull Request?**
+**What happens after you have submitted a Pull Request?**
 
 Well, you could wait for it to be reviewed by someone or you could attempt to fix another issue. 
 
