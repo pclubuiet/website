@@ -82,7 +82,7 @@ This is the official website of the Programming Club at UIET, Panjab University.
 
 13. Then create a Pull Request from that branch using GitHub.
 
-**What happens after you have submitted a Pull Request?**
+## What happens after you submit a Pull Request? ##
 
 Well, you could wait for it to be reviewed by someone or you could attempt to fix another issue. 
 
@@ -91,8 +91,8 @@ Well, you could wait for it to be reviewed by someone or you could attempt to fi
 You could help us in an even better way! 
 
 
-### Help us by reviewing other Pull Requests! ###
-If you have the time and the knowledge then you must review other Pull Requests. This would stop Pull Requests from stacking up and will definitely mean your Pull Request would be reviewed faster.
+### Help us review other Pull Requests! ###
+If you have the time and the knowledge, then you can also review other Pull Requests. This will stop Pull Requests from stacking up, making your Pull Request get reviewed faster.
 
 **Things to keep in mind while reviewing a Pull Request:**
 
