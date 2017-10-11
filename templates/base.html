@@ -74,7 +74,8 @@
 
   <p align="justify"><font size="2px" color="grey"><center>Copyright 2017 &copy; Programming Club,UIET. All Rights Reserved. <br></center></font></p>
 </footer>
-
+{% block scripts %}
+{% endblock %}
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register("{%static 'admin/js/service-worker.js' %}")
