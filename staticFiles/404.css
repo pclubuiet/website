@@ -1,0 +1,268 @@
+main,
+main>div {
+    align-items: center
+}
+body,
+main,
+main>div {
+    align-content: center
+}
+.crack,
+main>div,
+main>div span,
+main>div svg {
+    position: relative
+}
+a.main-link {
+    display: block;
+    cursor: pointer;
+    animation: pulseColor 1s linear 3.1s forwards;
+    font-weight: 500;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    text-decoration: none;
+    color: #fff!important
+}
+main,
+main>div {
+    display: flex
+}
+b:hover {
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+    color: #3187e2
+}
+a:active b {
+    color: #aaa
+}
+svg {
+    width: 50px;
+    height: auto
+}
+.crack {
+    z-index: 4;
+    margin-left: -50px
+}
+.crack polyline {
+    fill: none;
+    stroke: #3187e2;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1649.099;
+    stroke-dashoffset: 1649.099;
+    animation: drawStroke 1.5s ease-out .5s forwards
+}
+main {
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 24%!important
+}
+main>div {
+    overflow: hidden
+}
+main>div svg {
+    z-index: 1
+}
+main>div svg polygon {
+    fill: #3a3a3a
+}
+main>div span {
+    display: block;
+    z-index: 0;
+    padding: 0 12px;
+    line-height: 1.4
+}
+main>div:first-child {
+    text-align: right;
+    z-index: 1
+}
+main>div:first-child span:first-child {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: translateLeft 1s linear 1.25s forwards
+}
+main>div:first-child span:last-child {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: translateLeft 1s linear 1.45s forwards
+}
+main>div:first-child svg polygon {
+    animation: removeFill 10ms ease-out 1.6s forwards
+}
+main>div:last-child {
+    z-index: 0;
+    margin-left: -50px;
+    text-align: left
+}
+main>div:last-child span:first-child {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: translateRight 1s linear 1.65s forwards
+}
+main>div:last-child span:last-child {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: translateRight 1s linear 1.85s forwards
+}
+@keyframes drawStroke {
+    0% {
+        stroke-dashoffset: 1649.099
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+@keyframes removeFill {
+    0% {
+        fill: #3a3a3a
+    }
+    100% {
+        fill: rgba(58, 58, 58, 0)
+    }
+}
+@keyframes pulseColor {
+    0%, 100%, 50% {
+        color: #fff
+    }
+    25%,
+    75% {
+        color: #3187e2
+    }
+}
+@keyframes translateLeft {
+    0% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 150, 0, 0, 1);
+        opacity: 1
+    }
+    7.61% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 69.561, 0, 0, 1)
+    }
+    11.41% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 39.355, 0, 0, 1)
+    }
+    15.12% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 17.801, 0, 0, 1)
+    }
+    18.92% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.02, 0, 0, 1)
+    }
+    22.72% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5.661, 0, 0, 1)
+    }
+    30.23% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -10.852, 0, 0, 1)
+    }
+    50.25% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.282, 0, 0, 1)
+    }
+    70.27% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, .519, 0, 0, 1)
+    }
+    100% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        opacity: 1
+    }
+}
+@keyframes translateRight {
+    0% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -150, 0, 0, 1);
+        opacity: 1
+    }
+    7.61% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -69.561, 0, 0, 1)
+    }
+    11.41% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -39.355, 0, 0, 1)
+    }
+    15.12% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -17.801, 0, 0, 1)
+    }
+    18.92% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.02, 0, 0, 1)
+    }
+    22.72% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.661, 0, 0, 1)
+    }
+    30.23% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.852, 0, 0, 1)
+    }
+    50.25% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.282, 0, 0, 1)
+    }
+    70.27% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -.519, 0, 0, 1)
+    }
+    100% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        opacity: 1
+    }
+}
+::selection {
+    background-color: #adadad;
+    color: #fff
+}
+::-moz-selection {
+    background-color: #adadad;
+    color: #fff
+}
+::-o-selection {
+    background-color: #adadad;
+    color: #fff
+}
+::-ms-selection {
+    background-color: #adadad;
+    color: #fff
+}
+::-webkit-selection {
+    background-color: #adadad;
+    color: #fff
+}
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+    transform-style: preserve-3d
+}
+body,
+html {
+    height: 100%
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: #3a3a3a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    text-align: center
+}
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .34)
+}
+.fa {
+    -webkit-animation: none!important;
+    -moz-animation: none!important;
+    -o-animation: none!important;
+    -ms-animation: none!important;
+    animation: none!important;
+    color: #3187e2
+}
