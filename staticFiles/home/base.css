@@ -1,9 +1,7 @@
 .footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #222;
+	position: relative;
+	margin-top: 52px;
+	background-color: #222;
 }
 
 .loader-wrapper {
@@ -70,5 +68,12 @@
 		transform: scaleY(1.0);
 		-webkit-transform: scaleY(1.0);
 	}
+}
+.margin {
+  	margin-top:0.8cm;
+}
+
+.margin1 {
+  	margin-top:-0.1cm;
 }
 
