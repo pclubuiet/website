@@ -1,8 +1,8 @@
-# Programming Club UIET #
+# Programming Club UIET
 This is the official website of the Programming Club at UIET, Panjab University. ![Loading Badge Failed](https://travis-ci.org/pclubuiet/website.svg?branch=master)
-## Development Workflow ##
+## Development Workflow
 
-### Setup your development environment ###
+### Setup your development environment
 1. Fork this repository to your account.
 
 2. Create a virtual environment on your machine. 
@@ -45,14 +45,14 @@ This is the official website of the Programming Club at UIET, Panjab University.
     ```
     git remote add myfork https://github.com/<username>/website.git
     ```
-## Fixing issues ##
-### Step 1: Pick an issue ###
+## Fixing issues
+### Step 1: Pick an issue
 After selecting an issue
 1. Comment on the issue saying that you are working on the issue.
 2. We expect you to discuss the approach by comments.
 3. Updates or progress on the issue would be nice.
 
-### Step 2: Follow branch policies ###
+### Step 2: Follow branch policies
 1. Create a new branch and switch to it (make sure you are on master before doing this).
     ```
     git branch mybranch
@@ -93,17 +93,17 @@ After selecting an issue
  5. The pull request will not get merged until and unless the commits are squashed. In case there are multiple commits on the PR, the commit author needs to squash them and not the maintainers cherrypicking and merging squashes.
  6. If the PR is related to any front end change, please attach relevant screenshots in the pull request description
 o
-### Step 4: Submitting a Pull request ###
+### Step 4: Submitting a Pull request
 Once a PR is opened, try and complete it within 2 weeks, or at least stay actively working on it. Inactivity for a long period may necessitate a closure of the PR. As mentioned earlier updates would be nice.
 
-### Step 5: Code Review ###
+### Step 5: Code Review
 
 Your code will be reviewed, in this sequence, by:
 
 1. Travis CI: by building and running tests. If there are failed tests, the build will be marked as a failure. You can consult the CI log to find which tests. Ensure that all tests pass before triggering another build.
 2. Reviewer: A core team member will review your pull request and approve it or he will suggest changes.
 
-### Step 6: Help us by reviewing other Pull Requests! ###
+### Step 6: Help us by reviewing other Pull Requests!
 If you have the time and the knowledge then you must review other Pull Requests. This would stop Pull Requests from stacking up and will definitely mean your Pull Request would be reviewed faster.
 
 **Things to keep in mind while reviewing a Pull Request:**
@@ -114,3 +114,7 @@ If any of the following questions has a **YES** for an answer then the request s
 * Are there unnecessary changes?
 * Is a rebase required?
 * Is the fix dirty / hacky?
+
+## License
+
+This website is licensed under [GPL V3+](https://www.gnu.org/licenses/gpl-3.0.fr.html)
