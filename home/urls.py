@@ -3,8 +3,8 @@ from . import views
 
 app_name='home'
 urlpatterns = [
-url(r'^$', views.Home.as_view(), name = 'home'),
-url(r'^resources/', views.Resources.as_view(), name = 'resources')
+url(r'^$', views.HomeView, name = 'home'),
+url(r'^resources/', views.ResourceView, name = 'resources')
 ]
 
 handler404 = 'Template404.as_view()'
