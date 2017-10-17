@@ -1,5 +1,9 @@
 # Programming Club UIET
-This is the official website of the Programming Club at UIET, Panjab University. ![Loading Badge Failed](https://travis-ci.org/pclubuiet/website.svg?branch=master)
+This is the official website of the Programming Club at UIET, Panjab University.
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e745e9b4af624b4684559e8fc1e95697)](https://www.codacy.com/app/divyam3897/website?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pclubuiet/website&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/pclubuiet/website.svg?branch=master)](https://travis-ci.org/pclubuiet/website)
+
 ## Development Workflow
 
 ### Setup your development environment
