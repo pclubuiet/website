@@ -11,3 +11,6 @@ script:
   - python manage.py migrate
   - python manage.py collectstatic
   - python manage.py test
+  - py.test --cov=./  
+after_success:
+  - bash -c "curl -s https://codecov.io/bash -t 137b79cc-8adb-4a9d-b784-4000bb03537b"
