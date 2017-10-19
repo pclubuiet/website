@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+	<div class='jumbotron'>
+		{% if registered %}
+			<h1>Thank you for registering!</h1>
+		{% else %}
+			<h1>Sign up for the Progamming Club today!</h1>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{user_form.as_p}}
+				<input type="submit" class="btn btn-primary" value="Sign up!">
+			</form>
+			
+		    {% endif %}
+	</div>
+</div>
+{% endblock content %}
