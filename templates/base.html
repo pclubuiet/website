@@ -57,6 +57,7 @@
     <ul class="nav navbar-nav">
       <li {% block nav_home %}class="active"{% endblock %}><a href="{% url 'home:home' %}">Home</a></li>
       <li {% block nav_resources %}{% endblock %}><a href="{% url 'home:resources' %}">Resources</a></li>
+      <li {% block nav_register %}{% endblock %}><a href="{% url 'home:register' %}">Register</a></li>
     </ul>
     </div>
   </div>
