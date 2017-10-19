@@ -4,3 +4,22 @@
 {% block nav_resources %}
     class="active"
 {% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container" style="position:relative;">
+	<div class='jumbotron'>
+		{% if validated %}
+			<h1>Thank you for submitting your information!</h1>
+		{% else %}
+			<h1>Let us know more about you!</h1>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{profile_form.as_p}}
+				<input type="submit" class="btn btn-primary" value="Sign up!">
+			</form>
+			
+		    {% endif %}
+	</div>
+</div>  
+{% endif %}
+{% endblock content %}
