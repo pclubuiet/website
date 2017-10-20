@@ -4,3 +4,25 @@
 {% block nav_resources %}
     class="active"
 {% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container" style="position:relative;">
+	<div class='jumbotron'>
+		{% if validated %}
+			<h1>Thank you for submitting your information!</h1>
+		{% else %}
+			<h1>Let us know more about you!</h1>
+			<form method="POST" enctype="multipart/form-data" style="margin-top: 3rem; width: 85%; margin:auto; padding:20px;">
+				{% csrf_token %}
+				{% for field in profile_form %}
+				{{field.errors}}
+				<p style="margin:auto; margin-top:1rem; width:80%;"><span style="font-size:12px; position:absolute; left:16rem;">{{field.label_tag}}</span>{{field}}</p>
+				{% endfor %}
+				<input type="submit" class="btn btn-primary" value="Sign up!" style="margin-left: 8.3rem; margin-top: 3rem;">
+			</form>
+			
+		    {% endif %}
+	</div>
+</div>  
+{% endif %}
+{% endblock content %}

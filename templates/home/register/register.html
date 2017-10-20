@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block nav_home %}{% endblock %}
+{% block nav_register %}
+    class="active"
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class='jumbotron'>
+		{% if registered %}
+			<h1>Thank you for registering!</h1>
+		{% else %}
+			<h1>Sign up for the Progamming Club today!</h1>
+			<form method="POST" enctype="multipart/form-data" style="margin-top:3rem; width:80%; margin:auto;">
+				{% csrf_token %}
+				{% for field in user_form %}
+				{{field.errors}}
+				<p style="margin:auto; margin-top:1rem; width:30%;"><span style="font-size:12px; position:absolute; left:40rem;">{{field.label_tag}}</span>{{field}}</p>
+				{% endfor %}
+				<input type="submit" class="btn btn-primary" value="Sign up!" style="margin-left: 28.4rem; margin-top:2rem;">
+			</form>
+			
+		    {% endif %}
+	</div>
+</div>
+{% endblock content %}
