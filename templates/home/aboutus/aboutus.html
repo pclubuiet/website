@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block styles %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Moda">
+{% endblock %}
+{% block title %}Programming Club {% endblock %} 
+{% block nav_home %}{% endblock %}
+{% block nav_aboutus %} class ='active' {% endblock %}
+{% block content %}
+<div class="container text-center">
+  <h1 style='font-family: Lobster Two; font-size: 5.2vw;'>About us</h1>
+  <p id = 'aboutus' style='font-family: Moda; font-size: 1.8vw;'>Programming club is one of the biggest clubs of Panjab University. We aim and create a platform which allows students to gain assistance and mentorship to enhance their ability. Our aim is to propagate the enthusiasm for programming in the institute. We believe that every student should have an opportunity to learn how to code and we help them develop that passion for it.</p>
+</div>
+{% endblock %}

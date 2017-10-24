@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine&effect=shadow-multiple|3d-float');
+.navbar-custom {
+background-color: #23527C;
+color: #fff;
+}
+
+.navbar-custom .navbar-nav>.active> a, 
+.navbar-custom .navbar-nav>.active> a:focus, 
+.navbar-custom .navbar-nav>.active> a:hover {
+  border-radius: 10px 10px 0px 0px;
+  background: #00ACC1;
+  color: #23527C;
+}
+
+.navbar-brand {
+font-family: 'Tangerine',serif;
+color: #fff;
+}
+
+.navbar-header a.navbar-brand:hover {
+	color: #00ACC1;
+}
+
+.navbar .nav > li > a {
+    float: none;
+    color: #EEE;
+   
+}
+
+.navbar .nav > li > a:hover {
+    float: none;
+    color: #23527C;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.icon-bar {
+background-color: #fff;
+}

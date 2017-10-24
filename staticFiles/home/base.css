@@ -1,9 +1,40 @@
 .footer {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: #222;
+  height: 120px;
+}
+
+.jumbotron {
+	overflow: hidden;
+}
+
+body{
+	overflow: hidden;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 83vh;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron h1{
+	font-size: 6.2vw !important;
+}
+
+.jumbotron h2{
+	font-size: 2.9vw !important;
+}
+
+
+#content {
+	padding-top: 0px;
+	margin-bottom: 110px;
+	clear: both;
 }
 
 .loader-wrapper {
@@ -32,7 +63,6 @@
 	height: 100%;
 	width: 6px;
 	display: inline-block;
-
 	-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
 	animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }

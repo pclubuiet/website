@@ -8,3 +8,6 @@ class Home(TemplateView):
 
 class Resources(TemplateView):
     template_name = 'home/resources/resources.html'
+
+class AboutUs(TemplateView):
+	template_name = 'home/aboutus/aboutus.html'

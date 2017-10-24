@@ -9,6 +9,7 @@
     <title>{% block title %}Programming Club{% endblock %}</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{% static 'home/base.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/navstyle.css' %}"/>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -29,21 +30,21 @@
     jQuery(window).load(function(){
         jQuery(".loader-wrapper").fadeOut(2500);
     });
-	</script>
+      </script>
 
   </head>
   <body  {% block body_style %} {% endblock %}>
 <!--CSS Loader -->
 <div class="loader-wrapper">
   <div class="loader">
-  	<div class="loader-rect1"></div>
-  	<div class="loader-rect2"></div>
-  	<div class="loader-rect3"></div>
-  	<div class="loader-rect4"></div>
-  	<div class="loader-rect5"></div>
+       <div class="loader-rect1"></div>
+       <div class="loader-rect2"></div>
+       <div class="loader-rect3"></div>
+       <div class="loader-rect4"></div>
+       <div class="loader-rect5"></div>
   </div>
 </div>
-<nav class="navbar navbar-inverse" style="margin-bottom:0;">
+<nav class="navbar navbar-custom " style="margin-bottom:0;">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -51,13 +52,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="{% url 'home:home' %}">Programming Club</a>
+      <a class="navbar-brand" href="{% url 'home:home' %}" style = 'font-size: 40px;'>Programming Club</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav">
-      <li {% block nav_home %}class="active"{% endblock %}><a href="{% url 'home:home' %}">Home</a></li>
-      <li {% block nav_resources %}{% endblock %}><a href="{% url 'home:resources' %}">Resources</a></li>
-    </ul>
+      <ul class="nav navbar-nav navbar-right">
+    
+      <li {% block nav_home %}class="active"{% endblock %} ><a href="{% url 'home:home' %}"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+      <li {% block nav_aboutus %}{% endblock %}><a href = "{% url 'home:aboutus' %}"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;&nbsp;About us</a></li>
+      <li {% block nav_resources %}{% endblock %} ><a href="{% url 'home:resources' %}"><span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;Resources</a></li>
+      
+      </ul>
     </div>
   </div>
 </nav>
