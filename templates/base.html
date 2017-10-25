@@ -19,17 +19,17 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     {% block styles %}
     {% endblock %}
-</head>
+
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
     <script>
-    jQuery(window).load(function(){
-        jQuery(".loader-wrapper").fadeOut(2500);
-    });
-	</script>
+	    jQuery(window).load(function(){
+		jQuery(".loader-wrapper").fadeOut(2500);
+	    });
+    </script>
 
   </head>
   <body  {% block body_style %} {% endblock %}>
@@ -72,10 +72,9 @@
     <a href="mailto:pclubuiet@gmail.com"><i class="fa fa-google fa-3x"></i></a>
   </div>
 
-  <p align="justify"><font size="2px" color="grey"><center>Copyright 2017 &copy; Programming Club,UIET. All Rights Reserved. <br></center></font></p>
+  <p align="justify"><font size="2px" color="grey"><center>Copyright 2017 &copy; Programming Club,UIET. All Rights Reserved.</center></font></p>
 </footer>
   {% block scripts %}
   {% endblock %}
-  </body>
-
+</body>
 </html>
