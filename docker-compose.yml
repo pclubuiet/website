@@ -1,0 +1,19 @@
+db:
+  image: postgres:10
+  environment:
+    - POSTGRES_USER=pclubuietdb
+    - POSTGRES_PASSWORD=pclubuietdb
+
+website:
+  build: .
+  volumes:
+    - .:/opt/
+  environment:
+    - DB_NAME=pclubuietdb
+    - DB_PASSWORD=pclubuietdb
+    - DB_USER=pclubuietdb
+    - DB_HOST=pclubuietdb
+  links:
+    - db:pclubuietdb
+  ports:
+    - 8000:8000
