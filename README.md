@@ -9,7 +9,7 @@ This is the official website of the Programming Club at UIET, Panjab University.
 ### Setup your development environment
 1. Fork this repository to your account.
 
-2. Create a virtual environment on your machine. 
+2. Create a virtual environment on your machine.
     ```
     virtualenv -p python3 env
     ```
@@ -25,30 +25,57 @@ This is the official website of the Programming Club at UIET, Panjab University.
     ```
     git clone https://github.com/pclubuiet/website.git
     ```
-    
+
 5. Install the dependencies for the project.
     ```
     cd website
     pip3 install -r requirements.txt
     ```
-    
+
 6. Run the migrations and collect static files.
     ```
     python3 manage.py migrate
     python3 manage.py collectstatic
     ```
-    
+
 7. Run the live development server on your machine and test it.
     ```
     python3 manage.py runserver
     ```
     Once the server is started, open http://127.0.0.1:8000/home in a web browser.
     Everything went well if the webpage loads correctly and you don't see any errors.
-    
+
 8. Add a remote to your forked repository. This remote will be needed to push your changes to your repo.
     ```
     git remote add myfork https://github.com/<username>/website.git
     ```
+
+### Running in Docker Compose
+Prerequisites:
+1. Ensure you have Docker Engine installed. For installation steps head to https://docs.docker.com/engine/installation/.
+2. Ensure you have Docker Compose installed. For installation steps head to https://docs.docker.com/compose/install/.
+
+### Start / stop the environment.
+
+1. Start and aggregate logs from containers to console.
+    ```
+    docker-compose up
+    ```
+
+    To stop press `CTRL+C`
+
+
+2. Start in background
+    ```
+    docker-compose up -d
+    ```
+    To stop:
+    ```
+    docker-compose stop
+    ```
+
+If you want to force Compose to stop and recreate all containers, use the `--force-recreate` flag.
+
 ## Fixing issues
 ### Step 1: Pick an issue
 After selecting an issue
@@ -78,7 +105,7 @@ After selecting an issue
     Then stage them and commit them.
     Check out Chris Beams's guide to writing good commit messages [here](https://chris.beams.io/posts/git-commit/).
 
-    *A small description of your changes is must in the commit messages.* 
+    *A small description of your changes is must in the commit messages.*
 
 3. After you are done making changes, push the branch to your fork.
     ```
