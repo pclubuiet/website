@@ -49,6 +49,33 @@ This is the official website of the Programming Club at UIET, Panjab University.
     ```
     git remote add myfork https://github.com/<username>/website.git
     ```
+
+### Running in Docker Compose
+Prerequisites:
+1. Ensure you have Docker Engine installed. For installation steps head to https://docs.docker.com/engine/installation/.
+2. Ensure you have Docker Compose installed. For installation steps head to https://docs.docker.com/compose/install/.
+
+### Start / stop the environment.
+
+1. Start and aggregate logs from containers to console.
+    ```
+    docker-compose up
+    ```
+
+    To stop press `CTRL+C`
+
+
+2. Start in background
+    ```
+    docker-compose up -d
+    ```
+    To stop:
+    ```
+    docker-compose stop
+    ```
+
+If you want to force Compose to stop and recreate all containers, use the `--force-recreate` flag.
+
 ## Fixing issues
 ### Step 1: Pick an issue
 After selecting an issue
