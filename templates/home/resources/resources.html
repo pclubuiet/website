@@ -4,3 +4,30 @@
 {% block nav_resources %}
     class="active"
 {% endblock %}
+{% block content %}
+<div class="container text-center">
+  <h1>Resources</h1>
+  <p>Following are the resources that we think are the best for learning. Dive right in!</p>
+  <hr/>
+  <div class="card-grid">
+    {% for resource in resources %}
+	    <div class="card-wrap">
+        	<div class="card"  onclick="location.href='{{ resource.url }}';">
+            	<div>
+                	<h1>{{ resource.title }}</h1>
+            	</div>
+        	</div>
+	    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+	var colors = Array('#E91E63', '#03A9F4', '#D500F9', '#FF5722', '#8D6E63', '#455A64', '#2979FF', '#00E676', '#FF9100', '#00E5FF');
+	$('.card').each(function(){
+		this.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+	});
+</script>
+{% endblock %}
