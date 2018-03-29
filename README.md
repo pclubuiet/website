@@ -6,8 +6,8 @@ This is the official website of the Programming Club at UIET, Panjab University.
 
 ## Development Workflow
 
-### Setup your database in PostgreSQL
-1. Switch to ```postgre```(PostgreSQL administrative user) for performing administrative tasks.
+### Setup your database in PostgreSQL (Linux Specific)
+1.  Install postgresql if you haven't already and witch to ```postgres```(PostgreSQL administrative user) for performing administrative tasks.
     ```
     sudo su - postgres
     ```
@@ -42,9 +42,13 @@ This is the official website of the Programming Club at UIET, Panjab University.
     exit
     ```
 
-8. Edit host name of 127.0.0.1 to ```pclubuietdb``` in the root file.
+8. Edit your hosts file.
     ```
     sudoedit /etc/hosts
+    ```
+   Add the following entry to the hosts file.
+    ```
+    127.0.0.1	pclubuietdb
     ```
 
 ### Setup your development environment
@@ -73,7 +77,7 @@ This is the official website of the Programming Club at UIET, Panjab University.
     pip3 install -r requirements.txt
     ```
 
-6. Change ```DEBUG=True``` in /pclubWebsite/settings.py file.
+6. Change ```DEBUG=True``` in /pclubWebsite/settings.py file (DO NOT COMMIT this change to settings.py in your PRs).
 
 7. Run the migrations and collect static files.
     ```
