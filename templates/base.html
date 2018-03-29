@@ -49,14 +49,14 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="{% url 'home:home' %}">Programming Club</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
-      <li {% block nav_home %}class="active"{% endblock %}><a href="{% url 'home:home' %}">Home</a></li>
-      <li {% block nav_resources %}{% endblock %}><a href="{% url 'home:resources' %}">Resources</a></li>
+      <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
+      <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
     </ul>
     </div>
   </div>
