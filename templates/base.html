@@ -57,6 +57,7 @@
     <ul class="nav navbar-nav">
       <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
       <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
+      <li {% if request.resolver_match.url_name == "signup" %}class="active"{% endif %}> <a href="{% url 'accounts:signup' %}">Sign Up</a> </li>
     </ul>
     </div>
   </div>
