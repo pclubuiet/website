@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="{% static 'manifest.json' %}">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{% block title %}Programming Club{% endblock %}</title>
     <!-- Bootstrap -->
@@ -79,5 +80,16 @@
   {% block scripts %}
   {% endblock %}
   </body>
-
+  <script type="text/javascript">
+    if (navigator.serviceWorker.controller) {
+      console.log("Service worker already registererd");
+    } 
+    else {
+      navigator.serviceWorker.register("{% url 'sw.js' %}", {
+        scope: '/'
+      }).then(function(reg) {
+        console.log('Service worker has been registered for scope:'+ reg.scope);
+      });
+    }
+  </script>
 </html>

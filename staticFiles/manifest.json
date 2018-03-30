@@ -1,0 +1,24 @@
+{
+    "dir" : "ltr",
+    "lang" : "en",
+    "name" : "Programming Club UIET",
+    "scope" : "/",
+    "display" : "standalone",
+    "start_url" : "/home",
+    "short_name" : "PClub",
+    "theme_color" : "transparent",
+    "description" : "Programming Club, UIET - Official webapp.",
+    "orientation" : "any",
+    "icons" : [
+        {
+            "src" : "home/images/icon-192x192.png",
+            "sizes" : "192x192",
+            "type" : "image/png"
+        },
+        {
+            "src" : "home/images/icon-128x128.png",
+            "sizes" : "128x128",
+            "type" : "image/png"
+        } 
+    ]
+}
