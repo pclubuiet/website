@@ -110,6 +110,9 @@ img {
   .card-wrap {
     width: 25%;
   }
+  .nav-wrapper {
+    padding-left: 20px !important;
+  }
 }
 
 
@@ -132,4 +135,26 @@ img {
 
 .card > div {
   padding: 0 1em;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+nav a {
+	text-decoration: none !important;
+	color: inherit !important;
+	font-size: 1.3em !important;
+}
+
+.brand-logo {
+	font-size: 1.7em !important;
+}
+
+#mobile-demo a {
+	text-decoration: none !important;
+	color: inherit !important;
 }
