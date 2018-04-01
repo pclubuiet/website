@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center container-fluid">
+    <h1 class="text-primary">Login into Pclub</h1><br><br>
+  <a href="{% url 'social:begin' 'github' %}" class="btn btn-social btn-github"><i class="fa fa-github"></i>Login with GitHub</a><br><br>
+  <a href="{% url 'social:begin' 'google-oauth2'%}" class="btn btn-social btn-google"><i class="fa fa-google"></i>Login with Google</a><br>
+</div>
+{% endblock %}

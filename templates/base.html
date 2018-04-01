@@ -20,6 +20,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'home/base.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'registeration/bootstrap-social.css' %}"/>
     {% block styles %}
     {% endblock %}
     <!-- Latest compiled and minified JavaScript -->
@@ -51,16 +52,31 @@
       <a href="{% url 'home:home' %}" class="brand-logo">PClub</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
+        {% if user.username %}
+        <li>Hello,{{user.username}} </li>
+        {% endif %}
         <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
         <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
+        {% if user.username %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+        <li {% if request.resolver_match.url_name == "login" %}class="active"{% endif %}><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
       </ul>
     </div>
   </nav>
-
   <ul class="sidenav" id="mobile-demo">
+    {% if user.username %}
+    <li>Hello,{{user.username}} </li>
+    {% endif %}
     <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
     <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
-  </ul>
+    {% if user.username %}
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+    <li {% if request.resolver_match.url_name == "login" %}class="active"{% endif %}><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+</ul>
 <div id = "content">
 {% block content %}{% endblock %}
 </div>
@@ -82,7 +98,7 @@
   <script type="text/javascript">
     if (navigator.serviceWorker.controller) {
       console.log("Service worker already registererd");
-    } 
+    }
     else {
       navigator.serviceWorker.register("{% url 'sw.js' %}", {
         scope: '/'
