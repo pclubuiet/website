@@ -4,6 +4,9 @@ This is the official website of the Programming Club at UIET, Panjab University.
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e745e9b4af624b4684559e8fc1e95697)](https://www.codacy.com/app/divyam3897/website?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pclubuiet/website&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/pclubuiet/website.svg?branch=master)](https://travis-ci.org/pclubuiet/website)
 
+## Deploy
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/pclubuiet/website/tree/master)
+
 ## Development Workflow
 
 ### Setup your database in PostgreSQL (Linux Specific)
@@ -173,6 +176,8 @@ After selecting an issue
 o
 ### Step 4: Submitting a Pull request
 Once a PR is opened, try and complete it within 2 weeks, or at least stay actively working on it. Inactivity for a long period may necessitate a closure of the PR. As mentioned earlier updates would be nice.
+
+Deploy to heroku using the badge provided above and post the link in the description of your PR.
 
 ### Step 5: Code Review
 
