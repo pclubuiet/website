@@ -55,12 +55,15 @@
         <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
       </ul>
     </div>
-  </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-    <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
-    <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
-  </ul>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
+      <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
+      <li {% if request.resolver_match.url_name == "login" %}class="active"{% endif %}><a href="{% url 'login' %}">Login</a></li>
+    </ul>
+    </div>
+  </div>
+</nav>
 <div id = "content">
 {% block content %}{% endblock %}
 </div>
@@ -82,7 +85,7 @@
   <script type="text/javascript">
     if (navigator.serviceWorker.controller) {
       console.log("Service worker already registererd");
-    } 
+    }
     else {
       navigator.serviceWorker.register("{% url 'sw.js' %}", {
         scope: '/'
