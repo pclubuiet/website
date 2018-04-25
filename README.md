@@ -10,42 +10,47 @@ This is the official website of the Programming Club at UIET, Panjab University.
 ## Development Workflow
 
 ### Setup your database in PostgreSQL (Linux Specific)
-1.  Install postgresql if you haven't already and witch to ```postgres```(PostgreSQL administrative user) for performing administrative tasks.
+1.  Install postgresql if you haven't already and switch to ```postgres```(PostgreSQL administrative user) for performing administrative tasks.
     ```
     sudo su - postgres
     ```
 
-2. Log into Postgres session.
+2. Run Postgres Service
+    ```
+    systemctl start postgresql
+    ```
+
+3. Log into Postgres session.
     ```
     psql
     ```
 
-3. Create a database for our project.
+4. Create a database for our project.
     ```
     CREATE DATABASE pclubuietdb;
     ```
 
-4. Create a database user.
+5. Create a database user.
     ```
-    CREATE USER pclubuietdb WITH PASSWORD 'pclubuietdb'
+    CREATE USER pclubuietdb WITH PASSWORD 'pclubuietdb';
     ```
 
-5. Give access rights of the database to the user.
+6. Give access rights of the database to the user.
     ```
     GRANT ALL PRIVILEGES ON DATABASE pclubuietdb TO pclubuietdb;
     ```
 
-6. Exit SQL prompt.
+7. Exit SQL prompt.
     ```
     \q
     ```
 
-7. Exit out of ```postgres``` user's shell session.
+8. Exit out of ```postgres``` user's shell session.
     ```
     exit
     ```
 
-8. Edit your hosts file.
+9. Edit your hosts file.
     ```
     sudoedit /etc/hosts
     ```
@@ -61,7 +66,7 @@ This is the official website of the Programming Club at UIET, Panjab University.
     ```
     virtualenv -p python3 env
     ```
-    We recommend using python3-virtualenv. Any other packages would do fine though.
+    We recommend using python3-virtualenv. Any other packages would do fine though. Install the virtualenv using pip.
 
 3. Activate the newly created virtual environment.
     ```
