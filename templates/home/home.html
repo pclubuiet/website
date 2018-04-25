@@ -4,10 +4,6 @@
 {% block content %}
 <div class="jumbotron">
   <div class="container">
-    {% if user.username %}
-    <h1><center>Hello, {{user.username}}</center></h1>
-    <center><a href="{% url 'logout' %}">Logout</a></center>
-    {% endif %}
     <h1><center>Programming Club</center></h1>
     <h3><center>UIET, Panjab University</center></h3>
   </div>
