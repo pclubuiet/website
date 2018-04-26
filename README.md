@@ -5,7 +5,7 @@ This is the official website of the Programming Club at UIET, Panjab University.
 [![Build Status](https://travis-ci.org/pclubuiet/website.svg?branch=master)](https://travis-ci.org/pclubuiet/website)
 
 ## Deploy
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/pclubuiet/website/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Development Workflow
 
