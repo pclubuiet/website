@@ -10,42 +10,47 @@ This is the official website of the Programming Club at UIET, Panjab University.
 ## Development Workflow
 
 ### Setup your database in PostgreSQL (Linux Specific)
-1.  Install postgresql if you haven't already and witch to ```postgres```(PostgreSQL administrative user) for performing administrative tasks.
+1.  Install postgresql if you haven't already and switch to ```postgres```(PostgreSQL administrative user) for performing administrative tasks.
     ```
     sudo su - postgres
     ```
 
-2. Log into Postgres session.
+2. Run Postgres Service
+    ```
+    systemctl start postgresql
+    ```
+
+3. Log into Postgres session.
     ```
     psql
     ```
 
-3. Create a database for our project.
+4. Create a database for our project.
     ```
     CREATE DATABASE pclubuietdb;
     ```
 
-4. Create a database user.
+5. Create a database user.
     ```
-    CREATE USER pclubuietdb WITH PASSWORD 'pclubuietdb'
+    CREATE USER pclubuietdb WITH PASSWORD 'pclubuietdb';
     ```
 
-5. Give access rights of the database to the user.
+6. Give access rights of the database to the user.
     ```
     GRANT ALL PRIVILEGES ON DATABASE pclubuietdb TO pclubuietdb;
     ```
 
-6. Exit SQL prompt.
+7. Exit SQL prompt.
     ```
     \q
     ```
 
-7. Exit out of ```postgres``` user's shell session.
+8. Exit out of ```postgres``` user's shell session.
     ```
     exit
     ```
 
-8. Edit your hosts file.
+9. Edit your hosts file.
     ```
     sudoedit /etc/hosts
     ```
@@ -172,8 +177,8 @@ After selecting an issue
  3. For writing commit messages please adhere to the Commit style guidelines.
  4. Follow uniform design practices.
  5. The pull request will not get merged until and unless the commits are squashed. In case there are multiple commits on the PR, the commit author needs to squash them and not the maintainers cherrypicking and merging squashes.
- 6. If the PR is related to any front end change, please attach relevant screenshots in the pull request description
-o
+ 6. If the PR is related to any front end change, please attach relevant screenshots in the pull request description.
+ 
 ### Step 4: Submitting a Pull request
 Once a PR is opened, try and complete it within 2 weeks, or at least stay actively working on it. Inactivity for a long period may necessitate a closure of the PR. As mentioned earlier updates would be nice.
 
