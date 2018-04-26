@@ -66,7 +66,7 @@ This is the official website of the Programming Club at UIET, Panjab University.
     ```
     virtualenv -p python3 env
     ```
-    We recommend using python3-virtualenv. Any other packages would do fine though. Install the virtualenv using pip.
+    We recommend using python3-virtualenv. Any other packages would do fine though.
 
 3. Activate the newly created virtual environment.
     ```
@@ -177,8 +177,8 @@ After selecting an issue
  3. For writing commit messages please adhere to the Commit style guidelines.
  4. Follow uniform design practices.
  5. The pull request will not get merged until and unless the commits are squashed. In case there are multiple commits on the PR, the commit author needs to squash them and not the maintainers cherrypicking and merging squashes.
- 6. If the PR is related to any front end change, please attach relevant screenshots in the pull request description
-o
+ 6. If the PR is related to any front end change, please attach relevant screenshots in the pull request description.
+ 
 ### Step 4: Submitting a Pull request
 Once a PR is opened, try and complete it within 2 weeks, or at least stay actively working on it. Inactivity for a long period may necessitate a closure of the PR. As mentioned earlier updates would be nice.
 
