@@ -13,3 +13,7 @@ class Home(TemplateView):
 class Resources(views.View):
     def get(self, request, *args, **kwargs):
     	return render(request, "home/resources/resources.html", {'resources': Resource.objects.all()})
+
+class events(views.View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'home/events/events.html', {'events': Events.objects.all()})

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block styles %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter|Josefin+Slab">
+{%endblock%}
+{% block content %}
+<div class="container-fluid">
+
+</div>
+<ul id = "myTab" class = "nav nav-tabs">
+   <li class = "active">
+      <a href = "#upcoming-events" data-toggle = "tab">
+         Upcoming Events
+      </a>
+   </li>
+
+   <li><a href = "#past-events" data-toggle = "tab">Past Events</a></li>
+
+
+   </li>
+
+</ul>
+
+<div id = "myTabContent" class = "tab-content">
+
+   <div class = "tab-pane fade in active" id = "upcoming-events">
+     <br>
+     <div class="card-columns" style="color: black;">
+       {%if events %}
+       {% for event in events %}
+       <div class="card" style="width: 90%; height: 50rem; color: black;">
+         <img class="card-img-top" height="242" src="{{event.image.url}}" alt="Card image cap">
+         <div class="card-body">
+           <br>
+           <h4 class="card-title" style="font-family: Bitter;">{{event.title}}</h4>
+           <p class="card-text" style="font-family: Josefin Slab; font-size: 20px;">{{event.brief}}</p>
+           <a href="{{event.url}}" class="btn btn-primary">Know More</a>
+         </div>
+       </div>
+       {% endfor %}
+       {% else %}
+       <h1>No events Yet </h1>
+       {%endif%}
+
+
+
+       </div>
+
+   </div>
+
+   <div class = "tab-pane fade" id = "past-events">
+
+
+<div class="card-columns" style="color: black;">
+  <h1>No events yet</h1>
+  </div>
+
+
+
+  </div>
+
+</div>
+   </div>
+</div>
+
+{% endblock %}
