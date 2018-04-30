@@ -2,13 +2,13 @@
 {% load staticfiles %}
 {% block content %}
 <div class="container text-center">
-  <h1>Resources</h1>
-  <p>Following are the resources that we think are the best for learning. Dive right in!</p>
+  <h3>Resources</h3>
+  <p>Choose a topic and we'll show you some cool resources to start learning!</p>
   <hr/>
   <div class="card-grid">
     {% for resource in resources %}
 	    <div class="card-wrap">
-        	<div class="card"  onclick="location.href='{{ resource.url }}';">
+        	<div class="card"  onclick="location.href='/home/resource/{{ resource.pk }}';">
             	<div>
                 	<h1>{{ resource.title }}</h1>
             	</div>
