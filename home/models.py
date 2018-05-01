@@ -15,6 +15,7 @@ class Events(models.Model):
     url = models.URLField(max_length=128, db_index=True, blank=False, null=True)
     date=models.DateField()
     typeofentry=models.CharField(max_length=20, default='Suggestion')
+    suggested_by = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.title
