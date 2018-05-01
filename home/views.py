@@ -2,6 +2,7 @@ from django import views
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import *
+from datetime import date
 
 
 class Template404(TemplateView):
@@ -16,4 +17,8 @@ class Resources(views.View):
 
 class events(views.View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'home/events/events.html', {'events': Events.objects.all()})
+        events = Events.objects.all()
+        for event in events:
+            if event.date < date.today():
+                event.typeofentry='Past Events'
+        return render(request, 'home/events/events.html', {'events': events})
