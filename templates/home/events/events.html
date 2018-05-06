@@ -3,56 +3,111 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter|Josefin+Slab">
 {%endblock%}
 {% block content %}
-
+<h3> Events </h3>
 <ul id = "myTab" class = "nav nav-tabs">
-   <li class = "active"> <a href = "#upcoming-events" data-toggle = "tab"> Upcoming Events </a> </li>
-   <li> <a href = "#past-events" data-toggle = "tab"> Past Events </a> </li>
-   <li> <a href="{% url 'home:suggest_events' %}">Suggest Event</a></li>
+   <li class = "active"> <a href = "#upcoming-events" data-toggle = "tab">Upcoming</a> </li>
+   <li> <a href = "#past-events" data-toggle = "tab">Past</a> </li>
+   {% if request.user.is_authenticated %}<li> <a href = "#suggested-events" data-toggle = "tab">Suggested</a></li>{% endif %}
 </ul>
 
 <div id = "myTabContent" class = "tab-content">
-   <div class = "tab-pane fade in active" id = "upcoming-events">
-     <br>
-     <div class="card-columns" style="color: black;">
-       {% for event in events %}
-       {% if event.typeofentry == 'Upcoming Events' %}
-       <div class="card" style="width: 90%; height: 100%; color: black;">
-         <img class="card-img-top" height="242" src="{{event.image.url}}" alt="Card image cap">
-         <div class="card-body">
-           <br>
-           <h4 class="card-title" style="font-family: Bitter;">{{event.title}}</h4>
-           <p class="card-text" style="font-family: Josefin Slab; font-size: 20px;">{{event.brief}}</p>
-           <a href="{{event.url}}" class="btn btn-primary">Know More</a>
-         </div>
-         <h3 class="card-footer">
-           <small class="text-muted">{{event.date}}</small>
+  <div class = "tab-pane fade in active" id = "upcoming-events">
+    <div class="card-columns" style="color: black;">
+      {% for event in upcoming %}
+      <div class="card" style="width: 90%; height: 100%; color: black;">
+        <img class="card-img-top" height="242" src="{{event.image.url}}" alt="Card image cap">
+        <div class="card-body">
+          <br>
+          <h4 class="card-title" style="font-family: Bitter;">{{event.title}}</h4>
+          <p class="card-text" style="font-family: Josefin Slab; font-size: 20px;">{{event.brief}}</p>
+          <a href="{{event.url}}" class="btn btn-primary">Know More</a>
+        </div>
+        <h3 class="card-footer">
+          <small class="text-muted">{{event.date}}</small>
         </h3>
-       </div>
-       {% endif %}
-       {% endfor %}
-       </div>
-</div>
+      </div>
+      {% endfor %}
+      {% if not upcoming.count %}
+      No Upcoming Events.
+      {% endif %}
+    </div>
+  </div>
 
- <div class = "tab-pane fade" id = "past-events">
-   <div class="card-columns" style="color: black;">
-     {% for event in events %}
-     {% if event.typeofentry == 'Past Events'%}
-     <div class="card" style="width: 90%; height: 100%; color: black;">
-       <img class="card-img-top" height="242" src="{{event.image.url}}" alt="Card image cap">
-       <div class="card-body">
-         <br>
-         <h4 class="card-title" style="font-family: Bitter;">{{event.title}}</h4>
-         <p class="card-text" style="font-family: Josefin Slab; font-size: 20px;">{{event.brief}}</p>
-         <a href="{{event.url}}" class="btn btn-primary">Know More</a>
-       </div>
-       <h3 class="card-footer">
-         <small class="text-muted">{{event.date}}</small>
-      </h3>
-     </div>
-     {% endif %}
-     {% endfor %}
-     </div>
-</div>
+  <div class = "tab-pane fade" id = "past-events">
+    <div class="card-columns" style="color: black;">
+      {% for event in past %}
+      <div class="card" style="width: 90%; height: 100%; color: black;">
+        <img class="card-img-top" height="242" src="{{event.image.url}}" alt="Card image cap">
+        <div class="card-body">
+          <br>
+          <h4 class="card-title" style="font-family: Bitter;">{{event.title}}</h4>
+          <p class="card-text" style="font-family: Josefin Slab; font-size: 20px;">{{event.brief}}</p>
+          <a href="{{event.url}}" class="btn btn-primary">Know More</a>
+        </div>
+        <h3 class="card-footer">
+          <small class="text-muted">{{event.date}}</small>
+        </h3>
+      </div>
+      {% endfor %}
+      {% if not past.count %}
+      No Past Events.
+      {% endif %}
+    </div>
+  </div>
+
+    <div class = "tab-pane fade" id = "suggested-events">
+      {% if not perms.home.approve_suggested %}
+        <h3>Your Suggestions</h3>
+        <h4>Approved</h4>
+        <div class="card-columns" style="color: black;">
+        {% for event in approved %}
+          <div class="card" style="width: 90%; height: 100%; color: black;">
+            <img class="card-img-top" height="242" src="{{event.image.url}}" alt="Card image cap">
+            <div class="card-body">
+              <br>
+              <h4 class="card-title" style="font-family: Bitter;">{{event.title}}</h4>
+              <p class="card-text" style="font-family: Josefin Slab; font-size: 20px;">{{event.brief}}</p>
+              <a href="{{event.url}}" class="btn btn-primary">Know More</a>
+            </div>
+            <h3 class="card-footer">
+              <small class="text-muted">{{event.date}}</small>
+            </h3>
+          </div>
+        {% endfor %}
+        </div>
+        {% if not approved.count %}
+        No events.
+        {% endif %}
+        <hr/>
+        <h4>Awaiting Approval</h4>
+      {% else %}
+        <h3>All Suggestions Awaiting Approval</h3>
+      {% endif %}
+    <div class="card-columns" style="color: black;">
+      {% for event in suggested %}
+      <div class="card" style="width: 90%; height: 100%; color: black;">
+        <img class="card-img-top" height="242" src="{{event.image.url}}" alt="Card image cap">
+        <div class="card-body">
+          <br>
+          <h4 class="card-title" style="font-family: Bitter;">{{event.title}}</h4>
+          {% if perms.home.approve_suggested %}
+            <a href="{% url 'home:approve_event' pk=event.pk %}" class="btn btn-seconfary">Approve</a>
+          {% endif %}
+          <p class="card-text" style="font-family: Josefin Slab; font-size: 20px;">{{event.brief}}</p>
+          <a href="{{event.url}}" class="btn btn-primary">Know More</a>
+        </div>
+        <h3 class="card-footer">
+          <small class="text-muted">{{event.date}}</small>
+        </h3>
+      </div>
+      {% endfor %}
+      {% if not suggested.count %}
+      No events.
+      {% endif %}
+    </div>
+    <br/>
+    <a href="{% url 'home:suggest_event' %}">Suggest an Event</a>
+  </div>
 </div>
 
 {% endblock %}
