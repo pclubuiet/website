@@ -21,11 +21,11 @@ class Resources(views.View):
 class Events(views.View):
     def get(self, request, *args, **kwargs):
         events = Event.objects.all()
-        
+
         for event in events:
             if event.date < date.today():
                 event.typeofentry='Past Events'
-        
+
         past_events = events.filter(typeofentry="past")
         upcoming_events = events.filter(typeofentry="upcoming")
         suggested_events = []
@@ -56,6 +56,15 @@ class ApproveEvent(LoginRequiredMixin, views.View):
             event = Event.objects.get(pk=pk)
             event.typeofentry = "upcoming"
             event.save()
+            return HttpResponseRedirect(reverse('home:events'))
+        else:
+            return Http404
+
+class RejectEvent(LoginRequiredMixin, views.View):
+    def get(self, request, pk, *args, **kwargs):
+        if request.user.has_perm('home.approve_suggestion'):
+            event = Event.objects.get(pk=pk)
+            event.delete()
             return HttpResponseRedirect(reverse('home:events'))
         else:
             return Http404

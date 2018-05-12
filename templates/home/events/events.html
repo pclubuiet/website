@@ -93,6 +93,9 @@
           {% if perms.home.approve_suggested %}
             <a href="{% url 'home:approve_event' pk=event.pk %}" class="btn btn-seconfary">Approve</a>
           {% endif %}
+          {% if perms.home.approve_suggested %}
+            <a href="{% url 'home:reject_event' pk=event.pk %}" class="btn btn-seconfary">Reject</a>
+          {% endif %}
           <p class="card-text" style="font-family: Josefin Slab; font-size: 20px;">{{event.brief}}</p>
           <a href="{{event.url}}" class="btn btn-primary">Know More</a>
         </div>
