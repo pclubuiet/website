@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$4p#tsin((&rnm!%696^2xutz_-n5k)o&mnwg3z*^f7&--99h&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'social_django',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -84,6 +85,13 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+AWS_STORAGE_BUCKET_NAME = 'pclubuiet'
+AWS_S3_REGION_NAME = 'us-east-2'
+AWS_ACCESS_KEY_ID = 'AKIAJKJHQNOHPD3UNEUQ'
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 SOCIAL_AUTH_GITHUB_KEY = '1bb44747fe47d4452460'
 SOCIAL_AUTH_GITHUB_SECRET = '888dbf7469fa2496f4508d99c17ff178d6bade67'
@@ -153,4 +161,8 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'staticFiles') ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 's3_storages.MediaStorage'
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+DEFAULT_FILE_STORAGE = 's3_storages.MediaStorage'
