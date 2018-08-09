@@ -47,9 +47,14 @@
   	<div class="loader-rect5"></div>
   </div>
 </div>
-  <nav class='green'>
+  <nav>
     <div class="nav-wrapper">
-      <a href="{% url 'home:home' %}" class="brand-logo">PClub</a>
+      <a href="{% url 'home:home' %}" class="brand-logo">
+        {% if request.resolver_match.url_name == "resources" %}
+            <img src="../../static/home/images/pclubweb.png">
+        {% else %}
+            <img src="../static/home/images/pclubweb.png">
+        {% endif %}</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         {% if user.username %}
@@ -81,16 +86,13 @@
 {% block content %}{% endblock %}
 </div>
 <footer class='footer'>
-<br>
-  <hr/>
   <div class="container text-center">
     <a href="https://bit.ly/pclubfb"><i class="fa fa-facebook fa-3x"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://tinyurl.com/pclubslack"><i class="fa fa-slack fa-3x"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="mailto:pclubuiet@gmail.com"><i class="fa fa-google fa-3x"></i></a>
   </div>
-
-  <p align="justify"><font size="2px" color="grey"><center>Copyright 2017 &copy; Programming Club,UIET. All Rights Reserved. <br></center></font></p>
-  <hr/>
+  <p align="justify"><font size="2px" color="grey"><center>Copyright 2017 &copy; Programming Club,UIET. All Rights Reserved.<br>
+  </center></font></p>
 </footer>
   {% block scripts %}
   {% endblock %}

@@ -1,9 +1,17 @@
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url('fonts/AvenirLTStd-Medium.otf')format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .footer {
+  height: 110px;
+  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
 }
-
 .loader-wrapper {
 	position: fixed;
 	top: 0;
@@ -75,12 +83,20 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background:#f0f0f0;
+  margin: 0 0 110px; /*footer height*/
 }
 
 img {
-  max-width:100%;
+  width: 80px;
+  height: 40px;
 }
 
 .card-grid {
@@ -115,6 +131,25 @@ img {
   }
 }
 
+.jumbotron{
+  background-image: url('images/code_back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+  font-family: "Avenir LT Std";
+  color: #39b54a;
+}
+
+.text-center{
+  font-family: "Avenir LT Std";
+  color: #353539;
+}
+
+.text-center p{
+  font-size: 16px;
+}
 
 .card {
   background-color: white;
@@ -140,21 +175,35 @@ img {
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
-	font-size: inherit;
+  font-size: inherit;
+}
+
+nav{
+  background-color: #060606;
+}
+
+.active,ul li:hover{
+  background: #39b54a !important;
+  color: white;
 }
 
 nav a {
-	text-decoration: none !important;
-	color: inherit !important;
-	font-size: 1.3em !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  font-size: 1.3em !important;
+}
+
+nav a:focus{
+  outline: none;
 }
 
 .brand-logo {
-	font-size: 1.7em !important;
+  font-size: 1.7em !important;
 }
 
-#mobile-demo a {
-	text-decoration: none !important;
-	color: inherit !important;
+#mobile-demo a { 
+  text-decoration: none !important;
+  color: inherit !important;
 }
