@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$4p#tsin((&rnm!%696^2xutz_-n5k)o&mnwg3z*^f7&--99h&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -100,15 +100,10 @@ LOGOUT_REDIRECT_URL = '/home'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME', 'pclubuietdb'),
-        'USER': os.getenv('DB_USER', 'pclubuietdb'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'pclubuietdb'),
-        'HOST': os.getenv('DB_HOST', 'pclubuietdb'),
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlite3.db',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

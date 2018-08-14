@@ -1,8 +1,15 @@
 {
-  "name": "website",
+  "name": "Programming Club UIET",
+  "description": "This is the official PClub Website.",
+  "repository": "https://github.com/pclubuiet/website",
+  "success_url": "/home/",
   "scripts": {
   },
   "env": {
+    "DJANGO_SETTINGS_MODULE": {
+      "description": "The django settings module to use.",
+      "value": "website.production_settings"
+    }
   },
   "formation": {
   },

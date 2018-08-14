@@ -13,18 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.urls import path, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 from django.views.generic.base import RedirectView
 
 urlpatterns = [
-    url(r'^sw.js', (TemplateView.as_view(template_name="sw.js", content_type='application/javascript', )), name='sw.js'),
-    url(r'^admin/', admin.site.urls),
-    url(r'^home/', include('home.urls')),
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
-    url(r'^oauth/', include('social_django.urls', namespace='social')),
-    url(r'^$', RedirectView.as_view(url='/home/')),
+    path('sw.js', (TemplateView.as_view(template_name="sw.js", content_type='application/javascript', )), name='sw.js'),
+    path('admin/', admin.site.urls),
+    path('home/', include('home.urls')),
+    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('oauth/', include('social_django.urls', namespace='social')),
+    path('', RedirectView.as_view(url='/home/')),
 ]
