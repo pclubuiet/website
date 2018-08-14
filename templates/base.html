@@ -6,13 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="{% static 'manifest.json' %}">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{% block title %}Programming Club{% endblock %}</title>
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel = 'stylesheet' href="{% static 'home/base.css' %}">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
@@ -23,19 +19,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     {% block styles %}
     {% endblock %}
-    <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script>
     jQuery(window).load(function(){
     jQuery(".loader-wrapper").fadeOut(2500);
     });
     </script>
   </head>
-  <body  {% block body_style %} {% endblock %} style="font-family: 'Roboto', sans-serif;">
+  <body  {% block body_style %} {% endblock %}>
   <!--CSS Loader -->
     <div class="loader-wrapper">
       <div class="loader">
@@ -46,7 +40,7 @@
         <div class="loader-rect5"></div>
       </div>
     </div>
-    <nav class='green'>
+    <nav  style="background-color: #424242;">
       <div class="nav-wrapper">
         <a href="{% url 'home:home' %}" class="brand-logo">PClub</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -76,7 +70,7 @@
         <li {% if request.resolver_match.url_name == "login" %}class="active"{% endif %}><a href="{% url 'login' %}">Login</a></li>
       {% endif %}
     </ul>
-    <div id = "content">
+    <div id="content">
       {% block content %}{% endblock %}
     </div>
     <footer class='footer'>
