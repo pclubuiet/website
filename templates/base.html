@@ -46,7 +46,7 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           {% if user.username %}
-            <li>Hello,{{user.username}} </li>
+            <li><a>Hello, {{user.username}}</a></li>
           {% endif %}
           <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
           <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>

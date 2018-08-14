@@ -11,17 +11,18 @@
   </div>
 </nav>
 
-<ul id="myTab" class="nav nav-tabs">
-   <li class="active"><a href="#blogs" data-toggle="tab" role="tab">Blogs</a></li>
-   <li><a href="#videos" data-toggle="tab" role="tab">Videos</a></li>
-   <li><a href="#ebooks" data-toggle="tab" role="tab">E-books</a></li>
-   <li><a href="#others" data-toggle="tab" role="tab">Others</a></li>   
-</ul>
-
-<div id="myTabContent" class="tab-content">
-  <div class="tab-pane fade in active" id="blogs">
-     <br>
-     <div class="card-columns" style="color: black;">
+<div class="row">
+  <div class="s12">
+    <ul class="tabs">
+      <li class="tab col s3"><a style="text-decoration: none;" href="#blogs" class="active">Blogs</a></li>
+      <li class="tab col s3"><a style="text-decoration: none;" href="#videos">Videos</a></li>
+      <li class="tab col s3"><a style="text-decoration: none;" href="#ebooks">Ebooks</a></li>
+      <li class="tab col s3"><a style="text-decoration: none;" href="#others">Others</a></li>
+    </ul>
+  </div>
+  <div class="col s12" id="blogs">
+    <br>
+    <div class="card-columns" style="color: black;">
       {% is_empty resources 'blog' as result %}
       {% if result %}
         <div class="list-group">  
@@ -36,9 +37,9 @@
       {% endif %}
     </div>
   </div>
-  <div class = "tab-pane fade in" id = "videos">
-     <br>
-     <div class="card-columns" style="color: black;">
+  <div class="col s12" id="videos">
+    <br>
+    <div class="card-columns" style="color: black;">
       {% is_empty resources 'video' as result %}
       {% if result %}
         <div class="list-group">  
@@ -53,9 +54,9 @@
       {% endif %}
     </div>
   </div>
-  <div class = "tab-pane fade in" id = "ebooks">
-     <br>
-     <div class="card-columns" style="color: black;">
+  <div class="col s12" id="ebooks">
+    <br>
+    <div class="card-columns" style="color: black;">
       {% is_empty resources 'ebook' as result %}
       {% if result %}
         <div class="list-group">  
@@ -70,9 +71,9 @@
       {% endif %}
     </div>
   </div>
-  <div class = "tab-pane fade in" id = "others">
-     <br>
-     <div class="card-columns" style="color: black;">
+  <div class = "col s12" id="others">
+    <br>
+    <div class="card-columns" style="color: black;">
       {% is_empty resources 'other' as result %}
       {% if result %}
         <div class="list-group">  
@@ -94,17 +95,10 @@
 <script src="{% static 'home/js/jquery.mobile.custom.min.js' %}"></script>
 <script src="{% static 'home/js/tab.js' %}"></script>
 <script>
-    $(function() {
-        $("body").swiperight(function() {
-            var tab = $('#myTab .active').prev();
-            if (tab.length > 0)
-                tab.find('a').tab('show');
-        });
-        $("body").swipeleft(function() {
-            var tab = $('#myTab .active').next();
-            if (tab.length > 0)
-                tab.find('a').tab('show');
-        });
+    $(document).ready(function(){
+      $('.tabs').tabs({
+        swipeable: true,
+      });
     });
 </script>
 {% endblock %}
