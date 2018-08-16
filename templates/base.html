@@ -49,7 +49,7 @@
             <li><a>Hello, {{user.username}}</a></li>
           {% endif %}
           <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
-          <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
+          <li {% if request.resolver_match.url_name == "topics" %}class="active"{% endif %}><a href="{% url 'home:topics' %}">Resources</a></li>
           {% if user.username %}
             <li><a href="{% url 'logout' %}">Logout</a></li>
           {% else %}
@@ -63,7 +63,7 @@
         <li>Hello,{{user.username}} </li>
       {% endif %}
       <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
-      <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:resources' %}">Resources</a></li>
+      <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:topics' %}">Resources</a></li>
       {% if user.username %}
         <li><a href="{% url 'logout' %}">Logout</a></li>
       {% else %}
