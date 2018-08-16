@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<div class="container text-center">
+  <h3>Resources</h3>
+  <p>Choose a topic and we'll show you some cool resources to start learning!</p>
+  <hr/>
+  <div class="card-grid">
+    {% for topic in topics %}
+      <div class="card-wrap">
+          <div class="topic-card" onclick="location.href='/home/resources/{{ topic.pk }}';">
+              <div>
+                  <h1>{{ topic.title }}</h1>
+              </div>
+          </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+  var colors = Array('#E91E63', '#03A9F4', '#D500F9', '#FF5722', '#8D6E63', '#455A64', '#2979FF', '#00E676', '#FF9100', '#00E5FF');
+  $('.topic-card').each(function(){
+    this.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+  });
+</script>
+{% endblock %}

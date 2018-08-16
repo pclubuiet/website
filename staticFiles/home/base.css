@@ -132,7 +132,7 @@ img {
 }
 
 
-.card {
+.topic-card {
   background-color: white;
   border-radius: 5px;
   height: 200px;
@@ -145,11 +145,11 @@ img {
   transition: 0.3s;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.topic-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.card > div {
+.topic-card > div {
   padding: 0 1em;
 }
 
@@ -238,3 +238,32 @@ a {
 .tabs .indicator {
   background-color:#000;
 } /*Color of underline*/
+
+.list-group, .card-columns {
+  height: 100%;
+}
+
+.text-center > a > i {
+  color: #424242;
+}
+
+.list-group > .card {
+  border-radius: 5px;
+  padding: 20px;
+  padding-bottom: 40px;
+  width: 90% !important;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list-group > .card > .card-body > a {
+  float: right;
+  text-decoration: none;
+  font-size: 18px;
+  color: #424242;
+}
+
+.list-group > .card > .card-body > a:hover {
+  color: #222222;
+}

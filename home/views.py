@@ -10,13 +10,11 @@ class Template404(TemplateView):
 class Home(TemplateView):
     template_name = 'home/home.html'
 
-class Resources(views.View):
+class Topics(views.View):
     def get(self, request, *args, **kwargs):
-    	return render(request, "home/resources/resources.html", {'resources': Resource.objects.all()})
+        return render(request, "home/resources/topics.html", {'topics': Resource.objects.all()})
 
-class ResourcePage(views.View):
+class Resources(views.View):
     def get(self, request, pk, *args, **kwargs):
-    	resource = get_object_or_404(Resource, pk=pk)
-    	print(resource)
-    	return render(request, "home/resources/resource.html", {'resources': resource.resourceurl_set.all(),
-    															'resource' : resource})
+        topic = get_object_or_404(Topic, pk=pk)
+        return render(request, "home/resources/resources.html", {'resources': topic.resource_set.all(), 'topic' : topic})
