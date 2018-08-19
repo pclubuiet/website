@@ -12,7 +12,7 @@
 </nav>
 
 <div class="row" style="margin-right: 0px;">
-  <div class="s12">
+  <div class="s12" id="tabsdiv">
     <ul class="tabs">
       <li class="tab col s3"><a style="text-decoration: none;" href="#blog" class="active">Blogs</a></li>
       <li class="tab col s3"><a style="text-decoration: none;" href="#video">Videos</a></li>
@@ -60,8 +60,21 @@
 <script>
     $(document).ready(function(){
       $('.tabs').tabs({
+        heightStyle: "fill",
         swipeable: true,
       });
+      $(function(){
+        resizeTab();
+        $( window ).resize(function() { resizeTab(); });
+      });
+      function resizeTab(){
+          var maxHeight = 0;
+          $('.carousel-item').each(function(){ 
+               if($(this).height() > maxHeight) maxHeight = $(this).height(); 
+          });
+          $(".tabs-content").css('height',maxHeight+'px');
+      }
+      //console.log($(".tabs-content.carousel.carousel-slider").height('auto'))
     });
 </script>
 {% endblock %}
