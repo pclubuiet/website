@@ -1,0 +1,195 @@
+[
+{
+    "model": "home.topic",
+    "pk": 4,
+    "fields": {
+        "title": "C++"
+    }
+},
+{
+    "model": "home.topic",
+    "pk": 6,
+    "fields": {
+        "title": "Python"
+    }
+},
+{
+    "model": "home.topic",
+    "pk": 7,
+    "fields": {
+        "title": "Git"
+    }
+},
+{
+    "model": "home.topic",
+    "pk": 8,
+    "fields": {
+        "title": "Data Science"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 2,
+    "fields": {
+        "title": "C++ Programming Tutorials Playlist",
+        "url": "https://www.youtube.com/playlist?list=PLAE85DE8440AA6B83",
+        "topic": 4,
+        "description": "<p>An awesome youtube playlist to get you started with c++!</p>",
+        "category": "video"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 3,
+    "fields": {
+        "title": "Tutorials Point",
+        "url": "https://www.tutorialspoint.com/cplusplus/",
+        "topic": 4,
+        "description": "<p>Tutorials point is helpful whenever you need a quick recap of the concepts.</p>",
+        "category": "blog"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 4,
+    "fields": {
+        "title": "Introduction to C++",
+        "url": "https://www.edx.org/course/introduction-c-microsoft-dev210x-5",
+        "topic": 4,
+        "description": "<p>This edX course is full of useful material and will get you going in no time.</p>",
+        "category": "other"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 5,
+    "fields": {
+        "title": "Intermediate C++",
+        "url": "https://www.edx.org/course/intermediate-c-microsoft-dev210-2x",
+        "topic": 4,
+        "description": "<p>Already Know C++?</p>\r\n<p>We found this intermediate level edX course just for you!</p>",
+        "category": "other"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 6,
+    "fields": {
+        "title": "C++ Beginners' Tutorial",
+        "url": "https://www.udemy.com/free-learn-c-tutorial-beginners/",
+        "topic": 4,
+        "description": "<p>This tutorial could teach C++ to dummies. Really!</p>",
+        "category": "other"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 7,
+    "fields": {
+        "title": "Learn Python the Hard Way",
+        "url": "https://learnpythonthehardway.org/",
+        "topic": 6,
+        "description": "<p>There is absolutely nothing like this book out there!</p>",
+        "category": "ebook"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 8,
+    "fields": {
+        "title": "Python 3 Tutorials",
+        "url": "https://www.youtube.com/watch?v=oVp1vrfL_w4&list=PLQVvvaa0QuDe8XSftW-RAxdo6OmaeL85M",
+        "topic": 6,
+        "description": "<p>Youtube python 3 tutorials playlist.</p>",
+        "category": "video"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 9,
+    "fields": {
+        "title": "Google's Python Class",
+        "url": "https://developers.google.com/edu/python/",
+        "topic": 6,
+        "description": "<p>Its Google!</p>\r\n<p>This one will get you rolling in no time!</p>",
+        "category": "blog"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 10,
+    "fields": {
+        "title": "Python Programming Tutorials",
+        "url": "https://www.youtube.com/watch?v=HBxCHonP6Ro&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_",
+        "topic": 6,
+        "description": "<p>A nice playlist on youtube to help you learn python.</p>",
+        "category": "video"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 11,
+    "fields": {
+        "title": "Learn Python - Code Academy",
+        "url": "https://www.codecademy.com/learn/learn-python",
+        "topic": 6,
+        "description": "<p>A fun course to help you learn python if you prefer building stuff while learning things.</p>",
+        "category": "other"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 12,
+    "fields": {
+        "title": "Learn Git",
+        "url": "https://classroom.udacity.com/courses/ud123",
+        "topic": 7,
+        "description": "<p>This course will help you learn what is version control and the most popular version control system i.e. Git</p>",
+        "category": "other"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 13,
+    "fields": {
+        "title": "Github & Collaboration",
+        "url": "https://classroom.udacity.com/courses/ud456",
+        "topic": 7,
+        "description": "<p>If you already know git, this course is for you.</p>\r\n<p>It'll help you figure out what Github is and how to use it.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>P.S.&nbsp;</strong>Knowledge of Git is a <em>pre-requisite</em> for this course.</p>",
+        "category": "other"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 14,
+    "fields": {
+        "title": "Atlassian Git bundle",
+        "url": "https://www.atlassian.com/git/tutorials",
+        "topic": 7,
+        "description": "<p>A great course for you if you prefer articles over videos.</p>",
+        "category": "other"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 15,
+    "fields": {
+        "title": "Youtube Git Tutorials",
+        "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx",
+        "topic": 7,
+        "description": "<p>This is as easy as it gets for beginners.</p>",
+        "category": "video"
+    }
+},
+{
+    "model": "home.resource",
+    "pk": 16,
+    "fields": {
+        "title": "Git Cheatsheet",
+        "url": "http://rogerdudler.github.io/git-guide/",
+        "topic": 7,
+        "description": "<p>Just a simple guide for getting started with git. No deep sh*t ;)</p>\r\n<p>&nbsp;</p>\r\n<p>The article says that. And its true.</p>",
+        "category": "blog"
+    }
+}
+]
