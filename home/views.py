@@ -12,7 +12,7 @@ class Home(TemplateView):
 
 class Topics(views.View):
     def get(self, request, *args, **kwargs):
-        return render(request, "home/resources/topics.html", {'topics': Resource.objects.all()})
+        return render(request, "home/resources/topics.html", {'topics': Topic.objects.all()})
 
 class Resources(views.View):
     def get(self, request, pk, *args, **kwargs):
