@@ -274,3 +274,10 @@ a {
   height:auto;
   padding-left: 20px;
 }
+
+body > nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
