@@ -1,5 +1,6 @@
 from django.db import models
 from tinymce.models import HTMLField
+from django.contrib.auth.models import User
 
 class Topic(models.Model):
   title = models.CharField(max_length=128, blank=False, null=True)
@@ -16,3 +17,13 @@ class Resource(models.Model):
 
   def __str__(self):
     return self.title + " (" + str(self.topic) + ")"
+
+class BlogPost(models.Model):
+  title = models.CharField(max_length=128, blank=False, null=True)
+  description = models.CharField(max_length=128, blank=True, null=True)
+  body = HTMLField()
+  created_at = models.DateTimeField(auto_now_add=True)
+  created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return self.title
