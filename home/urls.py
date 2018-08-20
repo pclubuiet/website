@@ -3,6 +3,7 @@ from . import views
 
 app_name='home'
 urlpatterns = [
+    path('faqs/', views.FAQs.as_view(), name = 'faqs'),
     path('tinymce/', include('tinymce.urls')),
     path('resources/<int:pk>/', views.Resources.as_view(), name = 'resources'),
     path('blog/<int:pk>/', views.BlogPostView.as_view(), name = 'blog_post'),

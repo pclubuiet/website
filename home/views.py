@@ -28,3 +28,8 @@ class BlogPostView(views.View):
     def get(self, request, pk, *args, **kwargs):
         post = get_object_or_404(BlogPost, pk=pk)
         return render(request, "home/blog/blog_post.html", {'post': post})
+
+class FAQs(views.View):
+    def get(self, request, *args, **kwargs):
+        faqs = FAQ.objects.all()
+        return render(request, "home/faqs.html", {'faqs': faqs})

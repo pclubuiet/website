@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+  <h3>Frequently Asked Questions</h3>
+  <hr/>
+    <div class="list-group">
+      {% for faq in faqs %}
+        <hr style="height: 1px; background-color: #e2e2e2;"/>
+        <h4>Q. {{ faq.question }}</h4>
+        {% autoescape off %}{{ faq.answer }}{% endautoescape %}
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
