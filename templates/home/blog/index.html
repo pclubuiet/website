@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<div class="container text-center">
+  <h3>Our Blog</h3>
+  <hr/>
+    <div class="list-group">
+      {% for post in posts %}
+        <div class="card" style="width: 18rem; padding-top: 10px; text-align: left; cursor: pointer;">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <hr/>
+            <p class="card-text">
+              {{ post.description }}
+            </p>
+            <i>
+              posted by <b>{{ post.created_by }}</b> on <b>{{ post.created_at.date }}</b> at <b> {{ post.created_at.time }}</b>
+            </i>
+            <br/>
+            <a href="{% url 'home:blog_post' pk=post.pk %}" > Read </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

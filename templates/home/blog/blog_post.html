@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+  <br/>
+  <h3>{{ post.title }}</h3>
+  <i>{{ post.description }}</i><br/><br/>
+  posted by <b>{{ post.created_by }}</b> on <b>{{ post.created_at.date }}</b> at <b> {{ post.created_at.time }}</b>
+  <hr style="color: red; width: 20px;"/>
+  {% autoescape off %}{{ post.body }}{% endautoescape %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
