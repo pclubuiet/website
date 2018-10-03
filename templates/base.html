@@ -70,6 +70,7 @@
       <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}><a href="{% url 'home:home' %}">Home</a></li>
       <li {% if request.resolver_match.url_name == "blog" %}class="active"{% endif %}><a href="{% url 'home:blog' %}">Blog</a></li>
       <li {% if request.resolver_match.url_name == "resources" %}class="active"{% endif %}><a href="{% url 'home:topics' %}">Resources</a></li>
+      <li {% if request.resolver_match.url_name == "leaderboard" %}class="active"{% endif %}><a href="{% url 'home:leaderboard' %}">Leaderboard</a></li>
       {% if user.username %}
         <li><a href="{% url 'logout' %}">Logout</a></li>
       {% else %}
