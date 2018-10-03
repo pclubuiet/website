@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    select {
+        display: block;
+    }
+    #form_box {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 4%;
+    background-color: white;
+    padding: 5%;
+    box-shadow: 10px 10px 5px grey;
+}
+</style>
+<div id = "form_box">
+    <center>
+        <h3>Hacktoberfest Leaderboard Sign Up!!</h3>    
+    </center>
+<form action="" method="POST" class="col s12" id = "registerUserForm">
+    {% csrf_token %}
+    <div class="row">
+    {% for i in form %}
+    
+    <div class="input-field col s12">
+      {{i}}
+      {% if i.field.widget.input_type != 'select' %}
+      <label for="{{i.auto_id}}" style="font-size: 14px; color: #4C3F39">{{i.name|title}}</label>
+      {% endif %}
+    </div>
+    {% endfor %}
+    </div>
+    <center>
+    <input type="submit" id = "submit_button" value="Submit" class="waves-effect waves-light btn" style="background-color: #424242">
+    </center>
+</form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+    $("#submit_button").click(function(event){
+        event.preventDefault();
+        var github_handle = $("#id_github_handle").val();
+        var email = $("#id_email").val();
+    $.ajax({
+        url : "{% url 'home:github_email_check' %}",
+        type : 'POST',
+        data : {'github_handle' : github_handle, 'email' : email},
+        success  : function(response)
+        {
+            if(response['message'] == "Duplicate Github Handle")
+            {
+                toastr.error("User with same github handle already exists")
+            }
+            else if(response['message'] == "Duplicate Email")
+            {
+                toastr.error("User with same email already exists")
+            }
+
+            else
+            {
+                $.ajax({
+                    url : "{% url 'home:github_check' %}",
+                    type : 'POST',
+                    data : {'github_handle' : github_handle},
+                    success : function(response)
+                    {
+                        if(response['message'] == "Not Found")
+                        {
+                            toastr.error("No github account is linked to this github handle.")
+                        }
+                        else
+                        {
+                            $("#registerUserForm").submit();
+                        }
+                    },
+                    error : function(response)
+                    {
+                        alert("Error!!");
+                    }
+                });
+            }
+        },
+        error : function(response)
+        {
+            alert("Error!!");
+        }
+    })
+    });
+    </script>
+{% endblock %}
