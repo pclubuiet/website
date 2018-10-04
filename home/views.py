@@ -39,16 +39,22 @@ class Leaderboard(views.View):
     def get(self, request, *args, **kwargs):
         users = Users.objects.all()
         for user in users:
-            user_name = user.github_handle
-            response = requests.get('https://api.github.com/search/issues?sort=created&q=author:{}&type:pr&per_page=100'.format(user_name), verify = False).json()
-            pr_count = 0
-            print(response)
-            for obj in response['items']:
-                if('pull_request' in obj):
-                    if('2018-09-30T00:00:00Z'<obj['created_at']<'2018-10-31T23:59:59Z'):
-                        pr_count += 1
-            user.pr_count = pr_count
-            user.save()
+            connected = False
+            while not connected:
+                try:
+                    user_name = user.github_handle
+                    response = requests.get('https://api.github.com/search/issues?sort=created&q=author:{}&type:pr&per_page=100'.format(user_name), verify = False).json()
+                    pr_count = 0
+                    print(response)
+                    for obj in response['items']:
+                        if('pull_request' in obj):
+                            if('2018-09-30T00:00:00Z'<obj['created_at']<'2018-10-31T23:59:59Z'):
+                                pr_count += 1
+                    user.pr_count = pr_count
+                    user.save()
+                    connected = True
+                except:
+                    pass
         return render(request, 'home/leaderboard.html', {'users': users})
 
 class RegisterUser(CreateView):

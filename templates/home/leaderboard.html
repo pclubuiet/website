@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
 <style>
@@ -244,12 +245,16 @@ div.material-table table th:last-child,
 div.material-table table td:last-child {
   padding: 0 14px 0 0;
 }
+a:hover
+{
+  font-style: italic;
+}
 </style>
 <div class="row">
     <div id="admin" class="col s12">
       <div class="card material-table">
         <div class="table-header">
-          <span class="table-title">Hacktoberfest Leaderboard&nbsp;&nbsp;&nbsp; <a href="{% url 'home:registeruser' %}" class="waves-effect waves-light btn" style="background-color: #424242;" >Register Now</a>
+          <span class="table-title">Hacktoberfest Leaderboard&nbsp;&nbsp;&nbsp; <a href="{% url 'home:registeruser' %}" class="waves-effect waves-light btn" style="background-color: #424242;color:white;" >Register Now</a>
           </span>
           <div class="actions">
             <a href="#" class="search-toggle waves-effect btn-flat nopadding"><i class="material-icons">search</i></a>
@@ -280,7 +285,7 @@ div.material-table table td:last-child {
       </div>
     </div>
   </div>
-  <img src="/static/home/images/hacktoberfest_banner.png" alt="">
+  <img src="{% static '/home/images/hacktoberfest_banner.png' %}" alt="">
 {% endblock %}
 
 {% block scripts %}
