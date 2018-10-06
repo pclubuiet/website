@@ -27,3 +27,13 @@ class BlogPost(models.Model):
 
   def __str__(self):
     return self.title
+class Users(models.Model):
+  name = models.CharField(max_length = 100)
+  year = models.CharField(max_length = 10, choices = (('','Choose Year'),('I', 'I'), ('II', 'II'), ('III', 'III'), ('IV', 'IV')))
+  branch = models.CharField(max_length = 100, choices = (('','Choose Branch'), ('CSE', 'CSE'), ('IT', 'IT'), ('ECE', 'ECE'), ('EEE', 'EEE'), ('Mech', 'Mech'), ('Bio Tech', 'Bio Tech')))
+  github_handle = models.CharField(max_length = 100, unique = True)
+  email = models.EmailField(unique = True)
+  pr_count = models.PositiveIntegerField(default = 0)
+
+  def __str__(self):
+    return self.name + " | " + self.github_handle
