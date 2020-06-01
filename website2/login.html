@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Signin</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap-social.css">
+    <link href="login.css" rel="stylesheet">
+
+    <style type="text/css">
+      .bgimg{
+        background-image: url("login3.jpg");
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body class="text-center bgimg container">
+    <header>
+      <div class="navbar">
+        <div class="container d-flex justify-content-between">
+          <a href="home2.html" class="navbar-brand d-flex align-items-center"> 
+          <h3 class="masthead-brand" style="color: white">PClub</h3>
+          </a>
+          
+          <nav class="nav nav-masthead justify-content-center" id="navbarHeader">
+            <a class="nav-link" href="home2.html" id="home">Home</a>
+            <a class="nav-link" href="resources.html" id="resources">Resources</a>
+            <a class="nav-link active" href="login.html" id="login">Login</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <form class="form-signin">
+      <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br>
+      <a href="https://pclubuiet.herokuapp.com/oauth/login/github/" class="btn btn-social btn-github"><i class="fa fa-github"></i>Login with GitHub</a><br><br>
+      <a href="https://pclubuiet.herokuapp.com/oauth/login/google-oauth2/" class="btn btn-social btn-google"><i class="fa fa-google"></i>Login with Google</a>
+      <p class="mt-5 mb-3 text-muted">2017 © Programming Club,UIET.</p>
+    </form>
+  </body>
+</html>
