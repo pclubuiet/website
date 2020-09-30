@@ -203,6 +203,11 @@ If any of the following questions has a **YES** for an answer then the request s
 * Is a rebase required?
 * Is the fix dirty / hacky?
 
+###We Hope that above details helped you Thank You!!
+
+
 ## License
 
 This website is licensed under [GPL V3+](https://www.gnu.org/licenses/gpl-3.0.fr.html)
+
+
