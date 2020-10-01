@@ -206,3 +206,6 @@ If any of the following questions has a **YES** for an answer then the request s
 ## License
 
 This website is licensed under [GPL V3+](https://www.gnu.org/licenses/gpl-3.0.fr.html)
+
+Thankyou!
+Please visit again.
