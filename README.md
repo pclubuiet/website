@@ -1,4 +1,4 @@
-# Programming Club UIET
+# Programming Club UIET - Quality Is Not Act Its Habit
 This is the official website of the Programming Club at UIET, Panjab University.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e745e9b4af624b4684559e8fc1e95697)](https://www.codacy.com/app/divyam3897/website?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pclubuiet/website&amp;utm_campaign=Badge_Grade)
