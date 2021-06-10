@@ -2,7 +2,7 @@ certifi==2018.8.13
 chardet==3.0.4
 defusedxml==0.5.0
 dj-database-url==0.4.2
-Django==2.1
+Django==2.2.24
 django-tinymce==2.7.0
 gunicorn==19.7.1
 idna==2.7
